@@ -7,7 +7,7 @@ const reasons = [
   {
     icon: 'fa-solid fa-location-dot',
     title: 'Structural Supply Advantage',
-    desc: 'Most Lagos pepper travels 700–1,000km from Northern Nigeria. Ours travels 300km from Benin City — arriving fresher, faster, and cheaper. That is a structural edge that no amount of effort from northern competitors can close.',
+    desc: 'Most Lagos pepper travels 700–1,000km from Northern Nigeria. Ours travels 300km from Benin City — arriving fresher, faster, and cheaper. A structural edge no competitor can eliminate.',
   },
   {
     icon: 'fa-solid fa-building-columns',
@@ -15,24 +15,24 @@ const reasons = [
     desc: 'RC No. 8181060 — Agrofini West Africa Limited is a properly incorporated Nigerian company, verifiable with the Corporate Affairs Commission (CAC). Not a concept. A company.',
   },
   {
-    icon: 'fa-solid fa-calendar-check',
-    title: 'Income Every Month',
-    desc: 'Five staggered crops — okra, cucumber, pepper, tomato, and snails — are scheduled so harvest revenue arrives every single month. No single-crop risk. No long gaps between cash flows.',
+    icon: 'fa-solid fa-handshake',
+    title: 'Demand-Anchored Model',
+    desc: 'We do not grow produce and then search for buyers. Agrofini establishes supply relationships — with households, hotels, restaurants, and corporates — before planting begins. Every harvest has a known destination before the first seed goes in the ground.',
   },
   {
     icon: 'fa-solid fa-rotate',
-    title: 'Integrated Operations',
-    desc: 'Snail farm waste fertilises crop zones. Pepper and cucumber off-cuts feed the snails. Shared drip infrastructure across all 20 acres meaningfully reduces per-acre cost versus standalone operations. Every enterprise makes the others cheaper.',
+    title: 'Full Chain Ownership',
+    desc: 'From soil to consumer — we own every link in the supply chain. Cold chain, packing, dispatch, and future value-added processing are built in. Each layer eliminates a middleman and captures the margin fragmented supply chains leave behind.',
   },
   {
     icon: 'fa-solid fa-chart-line',
-    title: 'Data-Backed Projections',
-    desc: 'Every figure in our farm plan is grounded in 2025 live market data — BusinessDay Lagos pepper prices, NBS food inflation, CBN macroeconomic forecasts, and verified yield data from Veggie Concept and Veggie Grow Nigeria.',
+    title: 'Intelligence-Led Operations',
+    desc: 'Every planting decision, price target, and route-to-market is driven by live Nigerian market data. We deploy capital where real demand exists — and adjust in real time. That is how demand-first farming works.',
   },
   {
     icon: 'fa-solid fa-clock',
     title: 'Fast First Cash Flow',
-    desc: 'Okra and cucumber target first harvest on Day 35 and Day 40 respectively — well before the 4–5 month window to first pepper harvest. Capital is designed not to sit idle. Our crop sequencing targets revenue from the first month of operations.',
+    desc: 'Okra and cucumber target first harvest on Day 35 and Day 40 respectively — well before the 4–5 month window to first pepper harvest. Capital is designed not to sit idle. Revenue is scheduled from the first month of operations.',
   },
 ]
 
@@ -62,11 +62,12 @@ const timeline = [
   {
     phase: 'Phase 3',
     period: 'Months 12–24',
-    title: 'Scale, Export & Partnerships',
+    title: 'Integration, Scale & Market Depth',
     bullets: [
-      'Snail operation reaches full maturity; Lagos hotel and restaurant supply contracts',
-      'NAFDAC registration for processed snail products; NEPC export licence initiated',
-      'Second-year operations benefit from amortised infrastructure — lower per-acre cost',
+      'Cold chain investment initiated — temperature-controlled dispatch to Lagos direct channels',
+      'Value-added processing: snail products, pepper paste, cucumber processing',
+      'Direct-to-consumer supply channel operational — households, hotels, embassies',
+      'NAFDAC registration for processed products; NEPC export licence initiated',
       'Land expansion evaluation; SEC compliance pathway and structured investment framework',
     ],
   },
@@ -123,7 +124,7 @@ export default function InvestPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
           >
-            Nigeria has 220 million people, a $3 billion annual food import bill, and a shortage of disciplined, commercially structured farming operations. Agrofini was built to close that gap — and we are raising our first round to do it.
+            Nigeria has 220 million people, a multi-billion dollar annual food import dependency, and a chronic shortage of demand-anchored, commercially disciplined farming operations. Agrofini was built to close that gap — starting with secured land, ending with the infrastructure that rewires how West Africa eats.
           </motion.p>
           <motion.p
             className="text-white/40 text-sm max-w-xl mx-auto"

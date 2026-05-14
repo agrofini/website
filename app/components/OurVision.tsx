@@ -22,7 +22,7 @@ export default function OurVision() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          &ldquo;To become the preferred agri-supply partner for Nigeria&apos;s largest food and beverage corporations — delivering consistent, contract-grade produce from commercial farmland that investors, buyers, and communities can rely on.&rdquo;
+          &ldquo;To build the food supply infrastructure West Africa&apos;s cities have been demanding for a generation — vertically integrated from soil to consumer, demand-anchored at every step, and operating at the scale that rewires how a continent feeds itself.&rdquo;
         </motion.blockquote>
 
         <motion.div
@@ -34,19 +34,19 @@ export default function OurVision() {
         >
           {[
             {
+              icon: 'fa-solid fa-rotate',
+              label: 'Full Value Chain',
+              value: 'Farm → Pack → Cold Chain → Direct Delivery. We own every link between soil and consumer — eliminating middlemen and capturing the margin they leave behind.',
+            },
+            {
               icon: 'fa-solid fa-industry',
               label: 'Target Corporate Off-Takers',
-              value: 'Nestlé · Nigerian Breweries · Guinness · Dangote',
+              value: 'Nestlé · Nigerian Breweries · Guinness · Dangote — the food and beverage giants we are building toward supplying at contract grade.',
             },
             {
-              icon: 'fa-solid fa-location-dot',
-              label: 'Strategic Locations',
-              value: 'Ogun State launchpad · Benin City expansion · Direct Lagos supply chain',
-            },
-            {
-              icon: 'fa-solid fa-arrow-trend-up',
-              label: 'Growth Model',
-              value: '5 acres secured (Ogun State) → 25-acre Benin City horticulture hub → 600 acres integrated vision',
+              icon: 'fa-solid fa-globe-africa',
+              label: 'Continental Ambition',
+              value: "Nigeria first. West Africa next. A demand-matched agricultural network built to supply the continent's fastest-growing cities.",
             },
           ].map((item) => (
             <div key={item.label} className="flex gap-4">
