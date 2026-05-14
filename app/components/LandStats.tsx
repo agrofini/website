@@ -3,10 +3,10 @@
 import { motion } from 'framer-motion'
 
 const stats = [
-  { value: '2 Hectares', label: 'Secured — Operational Launchpad, Prymepoint Farm Estate' },
-  { value: '50 Acres', label: 'Near-Term Acquisition Target — Ota, Ogun State' },
-  { value: '600 acres', label: 'Long-Term Vision — Full Commercial Scale' },
-  { value: '220M+', label: 'Nigerians — Africa\'s Largest Consumer Market' },
+  { value: '20 Acres', label: 'Operational Farm — Benin City, Edo State' },
+  { value: '₦212M', label: 'Projected Annual Net Profit (Moderate Scenario)' },
+  { value: '545%', label: 'Projected Year 1 ROI on ₦38.9M Investment' },
+  { value: '₦742M', label: '3-Year Cumulative Net Profit Projection' },
 ]
 
 export default function LandStats() {
@@ -20,8 +20,9 @@ export default function LandStats() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-4">Scale & Market</p>
+          <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-4">The Business Case</p>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-text">The Numbers That Matter</h2>
+          <p className="text-text/50 text-xs mt-3 max-w-xl mx-auto">Projections derived from 2025 live Nigerian market data. All figures are forward-looking estimates, not guarantees.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

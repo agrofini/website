@@ -5,8 +5,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ---
 
 ## Project Overview
-Professional investor-grade website for **Agrofini West Africa Limited** (RC No. 8181060, Nigeria) — a pre-launch agribusiness.
-- **Domain:** agrofiniholdings.com | **Contact:** info@agrofiniholdings.com | **Base:** Ogun State, Nigeria
+Professional investor-grade website for **Agrofini West Africa Limited** (RC No. 8181060, Nigeria) — a commercial agribusiness.
+- **Domain:** agrofiniholdings.com | **Contact:** info@agrofiniholdings.com | **Base:** Benin City, Edo State, Nigeria
 - **Stage:** Pre-operational — 12–24 months to full operations. All content must be aspirational but honest.
 
 ---
@@ -75,14 +75,26 @@ accent: '#F4A726'       // Amber/mustard — CTAs and highlights
 
 ## Business Content Reference
 
-**Key numbers:** 2 hectares (secured, Primepoint Farm Estate), 39 acres (estate partner), 150 acres (acquisition target, Ota, Ogun State)
+**Farm:** 20-acre commercial farm, Benin City, Edo State, Nigeria → supplies Lagos markets (Mile 12, Mushin, Daleko, Oyingbo)
 
-**Target audience:** Nigerian and diaspora investors, agribusiness partners, corporate off-takers (Nestlé, Nigerian Breweries, Guinness as target buyers)
+**Crop mix (per-acre profit ranked):**
+- 12 acres Habanero Pepper — primary cash crop, peak prices April–July
+- 1 acre Snail Farm (Archachatina marginata) — highest net/acre, premium protein
+- 4 acres Cucumber — fastest cash flow, Day-40 first revenue, 3 cycles/year
+- 2 acres Tomato — dry-season premium, 2 cycles/year
+- 1 acre Okra — monthly income stabiliser, 4 cycles/year, Day-35 first revenue
+
+**Financial projections (from Farm Operations Manual, May 2026):**
+- Year 1 investment: ₦38.9M | Annual net profit (moderate): ₦212M | Year 1 ROI: 545%
+- 3-year cumulative net profit: ₦742M | Monthly average income: ₦17.7M
+- All figures sourced from 2025 live Nigerian market data (BusinessDay, NBS, CBN)
+
+**Target audience:** Nigerian and diaspora investors, agribusiness partners, Lagos wholesale buyers, Lagos hotels & restaurants, export channels (snails from Year 2)
 
 **Investment timeline phases:**
-- Phase 1 (Months 1–6): Farm Setup & Infrastructure
-- Phase 2 (Months 6–12): First Harvest & Revenue
-- Phase 3 (Months 12–24): Land Expansion & Corporate Partnerships
+- Phase 1 (Months 1–6): Borehole, drip irrigation, snail pen, crop planting, team hire
+- Phase 2 (Months 6–12): First harvest & revenue, Mile 12 supply chain live, investor reporting
+- Phase 3 (Months 12–24): Snail export, hotel contracts, NAFDAC/NEPC registration, land expansion eval
 
 ---
 

@@ -4,9 +4,9 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 const teaserStats = [
-  { value: '$3B+', label: 'Nigeria\'s annual food import bill' },
-  { value: '220M', label: 'Consumers to feed — and growing' },
-  { value: '1st Round', label: 'We\'re raising our foundation capital now' },
+  { value: '₦212M', label: 'Projected annual net profit — 20-acre integrated farm (moderate scenario)' },
+  { value: '545%', label: 'Projected Year 1 ROI on ₦38.9M total investment' },
+  { value: 'Day 35', label: 'First projected cash flow from farm operations' },
 ]
 
 export default function InvestTeaser() {
@@ -64,7 +64,7 @@ export default function InvestTeaser() {
 
             <div className="mt-2 px-2">
               <p className="text-white/30 text-xs leading-relaxed">
-                Figures sourced from publicly available trade and FAO data. Past market conditions do not guarantee future returns. This section does not constitute a regulated investment solicitation.
+                Financial projections are derived from a detailed farm operations plan using 2025 live Nigerian market data (BusinessDay, NBS, CBN). Figures are forward-looking estimates. Actual results may vary. This does not constitute a regulated investment solicitation.
               </p>
             </div>
           </motion.div>

@@ -2,26 +2,36 @@
 
 import { motion } from 'framer-motion'
 
-const services = [
+const crops = [
+  {
+    icon: 'fa-solid fa-pepper-hot',
+    title: 'Habanero Pepper',
+    acres: '12 Acres',
+    desc: 'Our primary income engine. Staggered across three blocks to hit the April–July Lagos peak price window when bags reach ₦60,000–₦120,000. Most Lagos pepper travels 700–1,000km from the North — ours arrives fresher from just 300km.',
+  },
+  {
+    icon: 'fa-solid fa-circle',
+    title: 'Snail Farm',
+    acres: '1 Acre',
+    desc: 'Giant West African Snail (Archachatina marginata) — the highest net-profit-per-acre enterprise on the farm. Nigeria\'s annual snail demand of 7.5 million kg is chronically undersupplied. Ours supplies Lagos hotels, restaurants, and export channels.',
+  },
+  {
+    icon: 'fa-solid fa-leaf',
+    title: 'Cucumber',
+    acres: '4 Acres',
+    desc: 'Three cycles per year, first harvest on Day 40. Known in Nigeria as the "Farmer\'s ATM" — Mile 12 market alone trades over ₦100M in cucumber daily. Our fastest and most consistent cash-flow crop.',
+  },
   {
     icon: 'fa-solid fa-seedling',
-    title: 'Greenhouse Farming',
-    desc: 'Nigeria spends billions importing vegetables its own climate can produce. Our climate-controlled greenhouses deliver high-value crops year-round — breaking the import cycle one harvest at a time.',
+    title: 'Tomato',
+    acres: '2 Acres',
+    desc: 'Nigeria imports over $360M in tomato paste annually despite being one of Africa\'s largest producers. Our dry-season cycles (December–March) capture peak prices when northern supply is most constrained.',
   },
   {
-    icon: 'fa-solid fa-fish',
-    title: 'Aquaculture',
-    desc: 'Africa\'s largest fish consumer imports hundreds of thousands of tonnes annually. Our integrated fish farming operations are designed to capture domestic demand with locally farmed, affordable protein.',
-  },
-  {
-    icon: 'fa-solid fa-egg',
-    title: 'Poultry Production',
-    desc: 'Poultry is Nigeria\'s most consumed protein, with demand consistently outpacing supply. Our commercial systems are built for scale — delivering eggs and live birds to a market that never stops growing.',
-  },
-  {
-    icon: 'fa-solid fa-microchip',
-    title: 'Agro-Integrated Technologies',
-    desc: 'Data is the new soil. IoT sensors, precision irrigation, and farm management software drive our yields, reduce waste, and give investors full visibility into operations and performance.',
+    icon: 'fa-solid fa-spa',
+    title: 'Okra',
+    acres: '1 Acre',
+    desc: 'Four cycles per year with first harvest in just 35 days — Okra covers monthly labour costs during the establishment period before pepper revenue arrives. A monthly income stabiliser that also feeds the snail farm as a byproduct.',
   },
 ]
 
@@ -37,27 +47,28 @@ export default function WhatWeDo() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-4">Our Operations</p>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-text mb-4">Four Pillars of Production</h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-text mb-4">Five Crops. One Integrated Farm.</h2>
           <p className="text-text/60 max-w-2xl mx-auto">
-            Every pillar targets a proven, high-demand gap in Nigeria&apos;s food supply chain.
+            Each enterprise selected by per-acre net profit — staggered to generate income every month of the year.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          {crops.map((crop, i) => (
             <motion.div
-              key={service.title}
-              className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow"
+              key={crop.title}
+              className="bg-white rounded-2xl p-7 shadow-sm hover:shadow-md transition-shadow"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
               <div className="w-14 h-14 bg-sage rounded-xl flex items-center justify-center mb-5">
-                <i className={`${service.icon} text-primary text-2xl`} aria-hidden="true" />
+                <i className={`${crop.icon} text-primary text-2xl`} aria-hidden="true" />
               </div>
-              <h3 className="font-serif text-xl font-bold text-text mb-3">{service.title}</h3>
-              <p className="text-text/60 text-sm leading-relaxed">{service.desc}</p>
+              <p className="text-accent font-bold text-xs uppercase tracking-wider mb-1">{crop.acres}</p>
+              <h3 className="font-serif text-lg font-bold text-text mb-3">{crop.title}</h3>
+              <p className="text-text/60 text-sm leading-relaxed">{crop.desc}</p>
             </motion.div>
           ))}
         </div>

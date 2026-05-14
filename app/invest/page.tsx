@@ -5,9 +5,9 @@ import Disclaimer from '../components/Disclaimer'
 
 const reasons = [
   {
-    icon: 'fa-solid fa-bolt',
-    title: 'Early Mover Advantage',
-    desc: 'Nigeria\'s commercial agriculture sector is dramatically underserved relative to its market size. Agrofini enters now — before scale — giving early investors the foundational position most agribusinesses never offer.',
+    icon: 'fa-solid fa-location-dot',
+    title: 'Structural Supply Advantage',
+    desc: 'Most Lagos pepper travels 700–1,000km from Northern Nigeria. Ours travels 300km from Benin City — arriving fresher, faster, and cheaper. That is a structural edge that no amount of effort from northern competitors can close.',
   },
   {
     icon: 'fa-solid fa-building-columns',
@@ -15,24 +15,24 @@ const reasons = [
     desc: 'RC No. 8181060 — Agrofini West Africa Limited is a properly incorporated Nigerian company, verifiable with the Corporate Affairs Commission (CAC). Not a concept. A company.',
   },
   {
-    icon: 'fa-solid fa-arrow-trend-up',
-    title: 'Proven Market Demand',
-    desc: 'Nigeria imports over $3 billion in food annually — vegetables, fish, poultry, and processed inputs that domestic farming can produce. Every product we grow has an existing, undersupplied buyer.',
+    icon: 'fa-solid fa-calendar-check',
+    title: 'Income Every Month',
+    desc: 'Five staggered crops — okra, cucumber, pepper, tomato, and snails — are scheduled so harvest revenue arrives every single month. No single-crop risk. No long gaps between cash flows.',
   },
   {
-    icon: 'fa-solid fa-location-dot',
-    title: 'Strategic Location',
-    desc: 'Ogun State is the agricultural gateway to Lagos — Africa\'s largest commercial city. Our Prymepoint Farm Estate base puts us within hours of Nigeria\'s highest-volume food distribution networks.',
+    icon: 'fa-solid fa-rotate',
+    title: 'Integrated Operations',
+    desc: 'Snail farm waste fertilises crop zones. Pepper and cucumber off-cuts feed the snails. Shared drip irrigation reduces per-acre cost by ~15% versus standalone operations. Every enterprise makes the others cheaper.',
   },
   {
-    icon: 'fa-solid fa-industry',
-    title: 'Corporate Off-Taker Strategy',
-    desc: 'Our target buyers are not individuals — they are multinationals. Nestlé, Nigerian Breweries, Guinness, Dangote. Contract-grade, consistent supply is what separates agribusinesses they partner with from those they don\'t.',
+    icon: 'fa-solid fa-chart-line',
+    title: 'Data-Backed Projections',
+    desc: 'Every figure in our farm plan is grounded in 2025 live market data — BusinessDay Lagos pepper prices, NBS food inflation, CBN macroeconomic forecasts, and verified yield data from Veggie Concept and Veggie Grow Nigeria.',
   },
   {
-    icon: 'fa-solid fa-map-location-dot',
-    title: 'Clear Expansion Roadmap',
-    desc: 'From 2 hectares to 50 acres near-term, to 600 acres long-term — every phase is planned, funded in stages, and accountable. Investors see exactly where capital goes and what it unlocks.',
+    icon: 'fa-solid fa-clock',
+    title: 'Fast First Cash Flow',
+    desc: 'Okra and cucumber generate first revenue on Day 35 and Day 40 respectively — well before the 4–5 month window to first pepper harvest. Capital does not sit idle. The farm is earning from the first month.',
   },
 ]
 
@@ -42,10 +42,10 @@ const timeline = [
     period: 'Months 1–6',
     title: 'Farm Setup & Infrastructure',
     bullets: [
-      'Greenhouse structures, irrigation, and power infrastructure',
-      'First aquaculture ponds and poultry units established',
-      'IoT sensor network and farm management system deployed',
-      'First hires: Farm Manager, Operations Lead, Site Staff',
+      'Borehole drilled; 20-acre drip irrigation system installed',
+      'Snail pen constructed; 2,000 Archachatina marginata breeders stocked',
+      'Pepper nurseries established; okra and cucumber planted (Day 1 cash crops)',
+      'Farm team hired: Manager, Field Officers, Snail Technician, Driver, Security',
     ],
   },
   {
@@ -53,21 +53,21 @@ const timeline = [
     period: 'Months 6–12',
     title: 'First Harvest & Revenue',
     bullets: [
-      'First vegetable and crop harvest cycles completed',
-      'Fish and poultry inventory reaches first sale-ready batches',
-      'Off-taker conversations formalised into supply agreements',
-      'First investor reporting period — full transparency on outputs',
+      'Okra first harvest Day 35; cucumber first harvest Day 40 — earliest cash flows',
+      'Habanero pepper harvest begins Month 3–4; peak Lagos prices April–July',
+      'Mile 12 wholesale agent relationship operational; direct Lagos dispatch running',
+      'First investor reporting period — full yield, revenue, and cost transparency',
     ],
   },
   {
     phase: 'Phase 3',
     period: 'Months 12–24',
-    title: 'Land Expansion & Corporate Partnerships',
+    title: 'Scale, Export & Partnerships',
     bullets: [
-      'Near-term acquisition of up to 50 acres in Ota, Ogun State',
-      'Scale greenhouse, aquaculture, and poultry operations',
-      'Formalise corporate supply contracts with Target Corporate Off-Takers',
-      'Initiate SEC compliance process and structured investment framework',
+      'Snail operation reaches full maturity; Lagos hotel and restaurant supply contracts',
+      'NAFDAC registration for processed snail products; NEPC export licence initiated',
+      'Second-year operations benefit from amortised infrastructure — lower per-acre cost',
+      'Land expansion evaluation; SEC compliance pathway and structured investment framework',
     ],
   },
 ]
@@ -131,7 +131,7 @@ export default function InvestPage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            RC No. 8181060 · Prymepoint Farm Estate, Ogun State, Nigeria
+            RC No. 8181060 · 20-Acre Commercial Farm · Benin City, Edo State, Nigeria
           </motion.p>
         </div>
       </section>
@@ -147,13 +147,13 @@ export default function InvestPage() {
           >
             <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-4">The Opportunity</p>
             <h2 className="font-serif text-3xl font-bold text-text mb-5 leading-snug">
-              A Launchpad Already Secured. A Market That Cannot Wait.
+              20 Acres. Five Crops. One Direct Line to Lagos.
             </h2>
             <p className="text-text/70 leading-relaxed mb-4">
-              Agrofini has secured 2 hectares within Prymepoint Farm Estate in Ogun State — verified, survey-documented land that serves as our operational launchpad. This is not a proposal. The land exists. The legal footing is established.
+              Agrofini operates a 20-acre commercial farm in Benin City, Edo State — growing habanero pepper, snails, cucumber, tomato, and okra for direct supply to Lagos wholesale markets. Benin City sits 300km from Mile 12, West Africa&apos;s largest open food market. That proximity is our competitive edge.
             </p>
             <p className="text-text/70 leading-relaxed">
-              Ogun State borders Lagos — Nigeria&apos;s commercial capital and Africa&apos;s largest urban market. Every tonne we produce has a buyer within reach. Our job is to build the infrastructure to consistently meet that demand.
+              Most Lagos pepper travels 700–1,000km from the North. Ours arrives 4–6 hours after harvest — fresher, cheaper, and with zero middlemen between farm and buyer. The supply advantage is structural and permanent.
             </p>
           </motion.div>
 
@@ -163,15 +163,15 @@ export default function InvestPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-4">The Vision</p>
+            <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-4">The Projections</p>
             <h2 className="font-serif text-3xl font-bold text-text mb-5 leading-snug">
-              600 acres. Corporate Contracts. A Generational Business.
+              ₦212M Year 1. ₦742M Over Three Years.
             </h2>
             <p className="text-text/70 leading-relaxed mb-4">
-              Our near-term target is the acquisition of up to 50 acres in Ota, Ogun State — scaling our greenhouse farming, aquaculture, and poultry operations to corporate-grade production volumes.
+              Our farm operations plan — built on 2025 live Nigerian market data from BusinessDay, NBS, and CBN sources — projects ₦212M annual net profit from a ₦38.9M Year 1 investment, with revenue growing at 15.5% year-on-year as infrastructure costs are amortised.
             </p>
-            <p className="text-text/70 leading-relaxed">
-              The long-term vision is 600 acres of integrated commercial farmland, supplying multinationals — Nestlé, Nigerian Breweries, Guinness, Dangote — with contract-grade, consistent, locally grown produce. That is a business worth building.
+            <p className="text-text/50 text-sm leading-relaxed">
+              These are forward-looking projections, not guarantees. Actual results depend on market conditions, operational execution, and management quality.
             </p>
           </motion.div>
         </div>
@@ -190,7 +190,7 @@ export default function InvestPage() {
             <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-4">Why Agrofini</p>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-text">Six Reasons to Invest</h2>
             <p className="text-text/60 mt-4 max-w-2xl mx-auto">
-              Not every agribusiness is built the same. Here is what separates Agrofini from a farm and positions it as an investment thesis.
+              Not every agribusiness is built the same. Here is what separates Agrofini — structurally, operationally, and commercially.
             </p>
           </motion.div>
 
