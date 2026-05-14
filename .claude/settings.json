@@ -15,7 +15,12 @@
       "Bash(wait)",
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(node -e \"const {chromium} = require\\('@playwright/test'\\); console.log\\('playwright ok'\\);\")",
+      "Bash(node generate-pdf.js)"
+    ],
+    "additionalDirectories": [
+      "/Users/mo/Desktop/agrofini-website"
     ]
   }
 }

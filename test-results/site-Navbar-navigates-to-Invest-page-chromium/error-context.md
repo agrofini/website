@@ -1,0 +1,138 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "Agrofini" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e5]:
+        - link "Home" [ref=e6] [cursor=pointer]:
+          - /url: /
+        - link "Invest" [ref=e7] [cursor=pointer]:
+          - /url: /invest
+        - link "Contact" [ref=e8] [cursor=pointer]:
+          - /url: /contact
+        - link "Invest now with Agrofini" [ref=e9] [cursor=pointer]:
+          - /url: /invest
+          - text: Invest Now
+  - main [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e14]:
+        - heading "Rooted in Purpose. Growing for Africa." [level=1] [ref=e15]:
+          - text: Rooted in Purpose.
+          - text: Growing for Africa.
+        - paragraph [ref=e16]: An integrated agribusiness building Nigeria's food future from the ground up.
+        - generic [ref=e17]:
+          - link "Learn our story" [ref=e18] [cursor=pointer]:
+            - /url: "#who-we-are"
+            - text: Our Story
+          - link "Invest with Agrofini" [ref=e19] [cursor=pointer]:
+            - /url: /invest
+            - text: Invest With Us
+      - img [ref=e21]
+    - generic [ref=e24]:
+      - generic [ref=e27]:
+        - generic [ref=e28]: 
+        - paragraph [ref=e29]: Prymepoint Farm Estate
+        - paragraph [ref=e30]: Agboro Village, Obafemi-Owode LGA, Ogun State
+      - generic [ref=e32]:
+        - paragraph [ref=e33]: Who We Are
+        - heading "Born from Passion. Built for Impact." [level=2] [ref=e34]:
+          - text: Born from Passion.
+          - text: Built for Impact.
+        - paragraph [ref=e35]: Agrofini West Africa Limited is an emerging integrated agribusiness with a focus on commercial greenhouse farming, fish farming, poultry production, and agro-integrated technologies. Born out of a lifelong passion for agriculture, we are building a company that solves Nigeria's food security challenges through modern, responsible, and innovative farming practices.
+        - paragraph [ref=e36]: Our founders pooled resources and engaged Primepoint Farm Estate Limited to acquire a 2-hectare farmland as the intended launch site for Agrofini's operations.
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - paragraph [ref=e40]: Our Operations
+        - heading "What We Do" [level=2] [ref=e41]
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - generic [ref=e45]: 
+          - heading "Greenhouse Farming" [level=3] [ref=e46]
+          - paragraph [ref=e47]: Climate-controlled environments enabling year-round, high-yield crop production.
+        - generic [ref=e48]:
+          - generic [ref=e50]: 
+          - heading "Fish Farming" [level=3] [ref=e51]
+          - paragraph [ref=e52]: Sustainable aquaculture operations delivering consistent protein supply to Nigerian markets.
+        - generic [ref=e53]:
+          - generic [ref=e55]: 
+          - heading "Poultry Production" [level=3] [ref=e56]
+          - paragraph [ref=e57]: Modern poultry systems providing high-quality eggs and meat at commercial scale.
+        - generic [ref=e58]:
+          - generic [ref=e60]: 
+          - heading "Agro-Integrated Technologies" [level=3] [ref=e61]
+          - paragraph [ref=e62]: Smart farming tools and data-driven systems that maximise efficiency and output.
+    - generic [ref=e64]:
+      - paragraph [ref=e65]: Our Vision
+      - blockquote [ref=e66]: “Building supply chains that feed the giants — partnering with corporations like Nestlé, Nigerian Breweries, and Guinness to deliver consistent, high-quality agricultural produce from commercial farmland in Ogun State, Nigeria.”
+    - generic [ref=e68]:
+      - generic [ref=e69]:
+        - paragraph [ref=e70]: Our Footprint
+        - heading "Land & Scale" [level=2] [ref=e71]
+      - generic [ref=e72]:
+        - generic [ref=e73]:
+          - paragraph [ref=e74]: 2 Hectares
+          - paragraph [ref=e75]: Secured & Owned
+        - generic [ref=e76]:
+          - paragraph [ref=e77]: 39 Acres
+          - paragraph [ref=e78]: Estate Partner (Primepoint Farm Estate)
+        - generic [ref=e79]:
+          - paragraph [ref=e80]: 150 Acres
+          - paragraph [ref=e81]: Acquisition Target (Ota, Ogun State)
+        - generic [ref=e82]:
+          - paragraph [ref=e83]: Obafemi-Owode
+          - paragraph [ref=e84]: LGA, Ogun State, Nigeria
+    - generic [ref=e87]:
+      - heading "We're raising our first round." [level=2] [ref=e88]
+      - paragraph [ref=e89]: Be part of the foundation.
+      - link "Explore investment opportunities with Agrofini" [ref=e90] [cursor=pointer]:
+        - /url: /invest
+        - text: Explore Investment
+    - paragraph [ref=e93]: The projects described represent Agrofini's strategic vision and pre-launch roadmap, expected to be operational within 12–24 months. Nothing herein constitutes a financial guarantee or public solicitation.
+  - contentinfo [ref=e94]:
+    - generic [ref=e95]:
+      - generic [ref=e96]:
+        - generic [ref=e97]:
+          - paragraph [ref=e98]: Agrofini
+          - paragraph [ref=e99]:
+            - text: Agrofini West Africa Limited
+            - text: RC No. 8181060, Nigeria
+        - generic [ref=e100]:
+          - paragraph [ref=e101]: Navigation
+          - generic [ref=e102]:
+            - link "Home" [ref=e103] [cursor=pointer]:
+              - /url: /
+            - link "Invest" [ref=e104] [cursor=pointer]:
+              - /url: /invest
+            - link "Contact" [ref=e105] [cursor=pointer]:
+              - /url: /contact
+        - generic [ref=e106]:
+          - paragraph [ref=e107]: Get in Touch
+          - link "info@agrofiniholdings.com" [ref=e108] [cursor=pointer]:
+            - /url: mailto:info@agrofiniholdings.com
+            - generic [ref=e109]: 
+            - text: info@agrofiniholdings.com
+          - generic [ref=e110]:
+            - link "Agrofini on LinkedIn" [ref=e111] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e112]: 
+            - link "Agrofini on Twitter/X" [ref=e113] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e114]: 
+            - link "Agrofini on Instagram" [ref=e115] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e116]: 
+      - generic [ref=e117]:
+        - paragraph [ref=e118]: © 2025 Agrofini West Africa Limited. All rights reserved.
+        - paragraph [ref=e119]: The projects described represent Agrofini's strategic vision and pre-launch roadmap. Nothing herein constitutes a financial guarantee or public solicitation.
+      - paragraph [ref=e120]:
+        - text: Icons by
+        - link "Font Awesome" [ref=e121] [cursor=pointer]:
+          - /url: https://fontawesome.com
+        - text: (CC BY 4.0). Map data ©
+        - link "OpenStreetMap contributors" [ref=e122] [cursor=pointer]:
+          - /url: https://www.openstreetmap.org/copyright
+        - text: .
+```

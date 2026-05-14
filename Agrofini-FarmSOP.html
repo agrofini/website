@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Agrofini — Farm SOP, Crop Management & Corrected Financial Reality</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --g:#00674B;--gd:#1a3d2b;--am:#F4A726;--ea:#5C3D2E;
+  --tx:#1C1C1C;--mu:#4a5568;--li:#F7FAF8;--sa:#E8F0EB;
+  --bo:#CBD5CE;--re:#C0392B;--or:#E67E22;--pu:#7B2FBE;
+}
+body{font-family:'Segoe UI',Helvetica,Arial,sans-serif;color:var(--tx);background:#fff;font-size:9.5pt;line-height:1.65;}
+.pb{page-break-before:always;break-before:page;}
+p{margin-bottom:2.5mm;color:var(--mu);}
+strong{color:var(--tx);}
+ul,ol{padding-left:5mm;margin-bottom:3mm;}
+li{font-size:9pt;color:var(--mu);margin-bottom:1.5mm;}
+h3{font-size:11.5pt;font-weight:700;color:var(--gd);margin:5mm 0 2.5mm;}
+h4{font-size:10pt;font-weight:700;color:var(--tx);margin:3.5mm 0 2mm;}
+h5{font-size:9.5pt;font-weight:700;color:var(--g);margin:3mm 0 1.5mm;}
+
+/* COVER */
+.cover{background:linear-gradient(150deg,#050f09,#1a3d2b 50%,#00674B 100%);color:#fff;min-height:297mm;padding:30mm 22mm;display:flex;flex-direction:column;justify-content:space-between;}
+.c-tag{display:inline-block;background:var(--am);color:#1C1C1C;font-size:7.5pt;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:4px 14px;border-radius:20px;margin-bottom:6mm;}
+.cover h1{font-size:26pt;font-weight:900;line-height:1.15;margin-bottom:5mm;}
+.cover h1 em{color:var(--am);font-style:normal;}
+.cover-sub{font-size:11pt;color:rgba(255,255,255,0.6);max-width:140mm;line-height:1.75;margin-bottom:10mm;}
+.c-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin:6mm 0 10mm;}
+.cs{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);border-radius:7px;padding:3.5mm 4.5mm;}
+.cs .v{font-size:15pt;font-weight:800;color:var(--am);line-height:1;}
+.cs .l{font-size:7pt;color:rgba(255,255,255,0.5);margin-top:1.5mm;line-height:1.4;}
+.c-meta{font-size:8pt;color:rgba(255,255,255,0.35);border-top:1px solid rgba(255,255,255,0.1);padding-top:4mm;}
+.c-meta strong{color:rgba(255,255,255,0.6);}
+
+/* PAGE HEADER */
+.ph{background:var(--gd);color:#fff;padding:8mm 22mm 7mm;margin-bottom:8mm;}
+.ph .sl{font-size:7pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--am);margin-bottom:1mm;}
+.ph h2{font-size:16pt;font-weight:800;color:#fff;margin-bottom:0;}
+.ph p{font-size:9pt;color:rgba(255,255,255,0.55);margin-top:1mm;}
+.dp{padding:0 22mm 10mm;}
+
+/* TABLES */
+table{width:100%;border-collapse:collapse;margin-bottom:4mm;font-size:8.5pt;}
+thead tr{background:var(--gd);color:#fff;}
+thead th{padding:2.5mm 3.5mm;text-align:left;font-weight:600;font-size:8pt;}
+th.r,td.r{text-align:right;}
+tbody tr:nth-child(even){background:var(--li);}
+tbody td{padding:2.2mm 3.5mm;border-bottom:1px solid var(--bo);vertical-align:top;}
+td.b{font-weight:700;color:var(--tx);}
+td.g{color:var(--g);font-weight:700;}
+td.am{color:#9B6310;font-weight:700;}
+td.re{color:var(--re);font-weight:700;}
+tfoot tr{background:var(--gd);color:#fff;}
+tfoot td{padding:2.5mm 3.5mm;font-weight:700;}
+.sub td{background:var(--sa)!important;font-weight:700;color:var(--gd);}
+.hi td{background:#FEF9EE!important;font-weight:700;}
+.err td{background:#FEF0EE!important;}
+
+/* CALLOUT */
+.box{border-radius:0 8px 8px 0;padding:4mm 6mm;margin-bottom:4mm;}
+.box.g{background:var(--sa);border-left:4px solid var(--g);}
+.box.a{background:#FEF9EE;border-left:4px solid var(--am);}
+.box.r{background:#FEF0EE;border-left:4px solid var(--re);}
+.box.pu{background:#F5F0FF;border-left:4px solid var(--pu);}
+.box.dk{background:var(--gd);border-left:4px solid var(--am);}
+.box p{margin:0;font-size:9pt;}
+.box p+p{margin-top:2mm;}
+
+/* STAT CARDS */
+.sg{display:grid;gap:3mm;margin-bottom:5mm;}
+.sg4{grid-template-columns:repeat(4,1fr);}
+.sg3{grid-template-columns:repeat(3,1fr);}
+.sg2{grid-template-columns:repeat(2,1fr);}
+.sc{background:var(--li);border:1px solid var(--bo);border-top:3px solid var(--g);border-radius:6px;padding:3.5mm 4.5mm;}
+.sc.am{border-top-color:var(--am);}
+.sc.re{border-top-color:var(--re);}
+.sc.dk{background:var(--gd);border:none;}
+.sc .v{font-size:15pt;font-weight:800;color:var(--g);line-height:1;margin-bottom:1mm;}
+.sc.am .v{color:#9B6310;}
+.sc.dk .v{color:var(--am);}
+.sc.re .v{color:var(--re);}
+.sc .l{font-size:7.5pt;color:var(--mu);line-height:1.3;}
+.sc.dk .l{color:rgba(255,255,255,0.55);}
+
+/* LAYOUT */
+.tc{display:grid;grid-template-columns:1fr 1fr;gap:6mm;}
+.trc{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5mm;}
+.fb{border-top:1px solid var(--bo);margin-top:7mm;padding-top:2.5mm;display:flex;justify-content:space-between;font-size:7pt;color:var(--mu);}
+
+/* CROP SOP CARDS */
+.crop-sop{border:1.5px solid var(--bo);border-radius:10px;overflow:hidden;margin-bottom:8mm;page-break-inside:avoid;}
+.crop-sop-header{padding:4mm 5mm;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:4mm;}
+.crop-sop-header h3{margin:0;color:#fff;font-size:13pt;font-weight:800;}
+.crop-sop-header .meta{font-size:8pt;color:rgba(255,255,255,0.65);margin-top:0.5mm;}
+.crop-sop-header .badge{background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:20px;padding:2px 10px;font-size:8pt;font-weight:700;white-space:nowrap;color:#fff;}
+.cs-quick{display:grid;grid-template-columns:repeat(6,1fr);gap:2px;padding:3mm 4mm;background:rgba(0,0,0,0.04);}
+.csq{text-align:center;padding:2mm;}
+.csq .v{font-size:9.5pt;font-weight:800;color:var(--gd);}
+.csq .l{font-size:6pt;color:var(--mu);text-transform:uppercase;letter-spacing:0.5px;}
+.crop-sop-body{padding:4mm 5mm;background:#fff;}
+.sop-section{margin-bottom:3mm;}
+.sop-step{display:flex;gap:3mm;margin-bottom:2mm;align-items:flex-start;}
+.step-num{width:5.5mm;height:5.5mm;border-radius:50%;background:var(--g);color:#fff;font-size:6pt;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:0.5mm;}
+.step-num.am{background:var(--am);color:var(--tx);}
+.step-num.re{background:var(--re);}
+.alert{background:#FEF0EE;border:1px solid #E8BEBA;border-radius:5px;padding:2mm 3mm;margin:2mm 0;font-size:8.5pt;color:var(--re);}
+.alert strong{color:var(--re);}
+.tip{background:var(--sa);border:1px solid #BDD8C8;border-radius:5px;padding:2mm 3mm;margin:2mm 0;font-size:8.5pt;color:var(--gd);}
+.tip strong{color:var(--gd);}
+
+/* FERTILISER SCHEDULE */
+.fert-schedule{width:100%;border-collapse:collapse;font-size:8pt;margin-top:2mm;}
+.fert-schedule th{background:var(--g);color:#fff;padding:2mm 3mm;text-align:left;font-size:7.5pt;}
+.fert-schedule td{padding:1.8mm 3mm;border-bottom:1px solid var(--bo);vertical-align:top;}
+.fert-schedule tr:nth-child(even){background:var(--li);}
+
+/* PEST TABLE */
+.pest-table{font-size:8pt;}
+.pest-table .pest-name{font-weight:700;color:var(--re);}
+.pest-table .treatment{color:var(--g);}
+
+/* HEADER COLOURS PER CROP */
+.hc-1{background:linear-gradient(135deg,#00674B,#1a3d2b);}  /* Cucumber - deep green */
+.hc-2{background:linear-gradient(135deg,#C0392B,#922B21);}  /* Tomatoes - red */
+.hc-3{background:linear-gradient(135deg,#E67E22,#A04000);}  /* Pepper - orange */
+.hc-4{background:linear-gradient(135deg,#8E44AD,#6C3483);}  /* Bell Pepper - purple */
+.hc-5{background:linear-gradient(135deg,#27AE60,#1D7A42);}  /* Ugwu - bright green */
+.hc-6{background:linear-gradient(135deg,#2ECC71,#1A8A4A);}  /* Okra - mid green */
+.hc-7{background:linear-gradient(135deg,#2980B9,#1A5276);}  /* Watermelon - blue */
+.hc-8{background:linear-gradient(135deg,#D4AC0D,#9A7D0A);}  /* Yam - gold */
+.hc-9{background:linear-gradient(135deg,#F39C12,#B7770D);}  /* Sweet Corn - yellow */
+
+@media print{
+  .cover,.ph,.crop-sop-header,.sc.dk,.step-num,.cs-quick{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  thead tr,tfoot tr,.sub td,.alert,.tip{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ COVER ══════════ -->
+<div class="cover">
+  <div><div style="font-size:9pt;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:50mm;">Agrofini West Africa Limited · RC No. 8181060</div></div>
+  <div>
+    <div class="c-tag">Standard Operating Procedures · Farm Management Bible</div>
+    <h1>Agrofini Farm SOP:<br/>Cultivation to Harvest<br/>— <em>Plus a Honest</em><br/><em>Financial Correction</em></h1>
+    <p class="cover-sub">Complete standard operating procedures, agronomy protocols, pest management, fertiliser schedules, harvesting criteria, and corrected realistic financial projections for 15,000 sqm at Prymepoint Farm Estate. Includes the path to ₦50M net profit — and exactly why the previous projections were wrong.</p>
+    <div class="c-strip">
+      <div class="cs"><div class="v">9 Crops</div><div class="l">Full SOP from seed to market for every crop</div></div>
+      <div class="cs"><div class="v">₦9–13M</div><div class="l">Corrected realistic Year 1 net profit — 15,000 sqm open field</div></div>
+      <div class="cs"><div class="v">₦50M</div><div class="l">Achievable — but requires greenhouse + aquaculture + poultry or 50+ acres</div></div>
+      <div class="cs"><div class="v">100%</div><div class="l">Honest. No inflated greenhouse yields disguised as open field numbers.</div></div>
+    </div>
+    <div class="c-meta">
+      <strong>Farm:</strong> Prymepoint Farm Estate, Obafemi-Owode LGA, Ogun State &nbsp;·&nbsp;
+      <strong>RC:</strong> No. 8181060 &nbsp;·&nbsp;
+      <strong>Date:</strong> April 2026 &nbsp;·&nbsp;
+      <strong>Classification:</strong> Internal Operations Manual
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════ FINANCIAL CORRECTION ══════════ -->
+<div class="pb"></div>
+<div class="ph">
+  <div class="sl">Section 01 — Transparency First</div>
+  <h2>Financial Reality Check: What Was Wrong &amp; What Is True</h2>
+  <p>An honest correction of the previous ₦50M projection before any SOP is read.</p>
+</div>
+<div class="dp">
+
+  <div class="box r">
+    <p><strong>What went wrong in the previous analysis:</strong> The open field revenue projections used greenhouse-level yield benchmarks (e.g. 14 kg/sqm for cucumber, 25 kg/sqm for tomatoes) — figures that are only achievable in a fully controlled protected cultivation environment. Open field farming in Ogun State with good management achieves 2–3 kg/sqm for cucumber, 1.5–2.5 kg/sqm for tomatoes. The projections were overstated by 5–10× for most crops. The ₦58.7M Year 1 figure and "₦50M by Month 9" claim were not realistic for 15,000 sqm open field.</p>
+  </div>
+
+  <h3>1.1 Corrected Open Field Yield Benchmarks — Nigeria, Southwest (IITA/FAO Source)</h3>
+  <table>
+    <thead>
+      <tr><th>Crop</th><th class="r">Yield Used (Previous)</th><th class="r">Correct Open Field Yield (Nigeria)</th><th class="r">Error Factor</th><th>Source</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="b">Cucumber</td><td class="r re">14 kg/sqm/cycle</td><td class="r g">2.0–3.0 kg/sqm/cycle</td><td class="r re">5–7×</td><td>IITA; Greenhouse vs. open field distinction</td></tr>
+      <tr><td class="b">Tomatoes</td><td class="r re">25 kg/sqm</td><td class="r g">1.5–2.5 kg/sqm</td><td class="r re">10–16×</td><td>NIHORT Ibadan; FAO Nigeria Tomato Study</td></tr>
+      <tr><td class="b">Tatashe Pepper</td><td class="r re">20 kg/sqm</td><td class="r g">1.0–2.0 kg/sqm</td><td class="r re">10–20×</td><td>Ogun State ADP Extension Data</td></tr>
+      <tr><td class="b">Bell Pepper</td><td class="r re">22 kg/sqm</td><td class="r g">1.5–2.5 kg/sqm</td><td class="r re">9–14×</td><td>IITA; improved variety trials</td></tr>
+      <tr><td class="b">Okra</td><td class="r re">12 kg/sqm</td><td class="r g">0.8–1.5 kg/sqm/cycle</td><td class="r re">8–15×</td><td>NIHORT Ibadan open field data</td></tr>
+      <tr><td class="b">Watermelon</td><td class="r re">35 kg/sqm</td><td class="r g">2.5–4.5 kg/sqm/cycle</td><td class="r re">8–14×</td><td>FAO West Africa; Nigeria field trials</td></tr>
+      <tr><td class="b">Yam</td><td class="r">2 kg/sqm</td><td class="r g">1.5–2.5 kg/sqm</td><td class="r g">Accurate</td><td>IITA yam programme</td></tr>
+      <tr><td class="b">Ugwu (leaf harvest)</td><td class="r re">18 kg/sqm/yr</td><td class="r g">0.6–1.3 kg/sqm/year</td><td class="r re">14–30×</td><td>Per-plant harvest rates; SW Nigeria commercial farms</td></tr>
+    </tbody>
+  </table>
+
+  <h3>1.2 Corrected 15,000 sqm Year 1 Revenue — Honest Figures</h3>
+  <table>
+    <thead><tr><th>Zone</th><th>Crop</th><th class="r">sqm</th><th class="r">Corrected Yield/sqm</th><th class="r">Price (₦)</th><th class="r">Revenue (₦)</th></tr></thead>
+    <tbody>
+      <tr><td>Zone A</td><td>Cucumber — 5 cycles</td><td class="r">2,000</td><td class="r">2.5 kg/cycle</td><td class="r">₦250/kg</td><td class="r">3,125,000</td></tr>
+      <tr><td>Zone B</td><td>Ugwu (continuous) + Okra (3 cycles)</td><td class="r">2,000</td><td class="r">Variable</td><td class="r">₦300–₦400</td><td class="r">1,650,000</td></tr>
+      <tr><td>Zone C</td><td>Tomatoes — 2 seasons</td><td class="r">2,500</td><td class="r">2.0 kg/season</td><td class="r">₦280/kg</td><td class="r">2,800,000</td></tr>
+      <tr><td>Zone D</td><td>Pepper (Tatashe + Scotch Bonnet)</td><td class="r">2,500</td><td class="r">1.5 kg/season × 1.5</td><td class="r">₦450/kg</td><td class="r">2,531,000</td></tr>
+      <tr><td>Zone E</td><td>Bell Pepper — 1.5 cycles (if buyer confirmed)</td><td class="r">1,500</td><td class="r">2.0 kg/cycle</td><td class="r">₦800/kg</td><td class="r">3,600,000</td></tr>
+      <tr><td>Zone F</td><td>Yam (stored, sold May Y2)</td><td class="r">1,800</td><td class="r">2.0 kg</td><td class="r">₦580/kg</td><td class="r">2,088,000</td></tr>
+      <tr><td>Zone G</td><td>Watermelon — 2 cycles</td><td class="r">1,000</td><td class="r">3.5 kg/cycle</td><td class="r">₦180/kg</td><td class="r">1,260,000</td></tr>
+      <tr><td>Zone H</td><td>Sweet Corn / Cassava pilot</td><td class="r">500</td><td class="r">—</td><td class="r">—</td><td class="r">250,000</td></tr>
+      <tr class="sub"><td colspan="5"><strong>Total Year 1 Revenue (Base)</strong></td><td class="r"><strong>₦17,304,000</strong></td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:8pt;color:var(--mu);">Note: Zone E (Bell Pepper) included only if buyer pre-confirmed. Without bell pepper buyer, total drops to ~₦13.7M.</p>
+
+  <table style="margin-top:2mm;">
+    <thead><tr><th>P&amp;L Line</th><th class="r">Year 1 (₦)</th><th class="r">Year 2 (₦)</th><th class="r">Year 3 (₦)</th></tr></thead>
+    <tbody>
+      <tr><td>Total Revenue</td><td class="r">17,304,000</td><td class="r">26,500,000</td><td class="r">38,000,000</td></tr>
+      <tr><td>Seeds, fertiliser, pesticides</td><td class="r">(3,200,000)</td><td class="r">(4,800,000)</td><td class="r">(6,900,000)</td></tr>
+      <tr><td>Labour (supervisor + casuals)</td><td class="r">(2,400,000)</td><td class="r">(3,600,000)</td><td class="r">(5,000,000)</td></tr>
+      <tr><td>Transport, packaging, admin</td><td class="r">(1,200,000)</td><td class="r">(1,800,000)</td><td class="r">(2,600,000)</td></tr>
+      <tr><td>Irrigation running cost</td><td class="r">(480,000)</td><td class="r">(480,000)</td><td class="r">(600,000)</td></tr>
+      <tr><td>Startup capital recovery</td><td class="r">(2,912,500)</td><td class="r">—</td><td class="r">—</td></tr>
+      <tr class="sub"><td><strong>Net Profit After All Costs</strong></td><td class="r g b">₦7,111,500</td><td class="r g b">₦15,820,000</td><td class="r g b">₦22,900,000</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sg sg3">
+    <div class="sc re"><div class="v">₦7–13M</div><div class="l">Honest Year 1 net profit range — 15,000 sqm open field. Not ₦58M.</div></div>
+    <div class="sc am"><div class="v">₦50M</div><div class="l">Requires greenhouse + aquaculture + poultry OR 50+ acres open field. Cannot be achieved on 15k sqm open field alone.</div></div>
+    <div class="sc"><div class="v">₦7M → ₦23M</div><div class="l">Realistic 3-year progression — each year doubles as management improves and more cycles complete.</div></div>
+  </div>
+
+  <h3>1.3 Realistic Path to ₦50M Net Profit — Three Scenarios</h3>
+  <table>
+    <thead><tr><th>Path</th><th>What It Requires</th><th class="r">Capital Needed</th><th class="r">Realistic Timeframe</th></tr></thead>
+    <tbody>
+      <tr><td class="b g">Option A — Integrated Farm</td><td>Add greenhouse (1,000 sqm) + aquaculture (8 ponds) + poultry (500 birds) to Prymepoint</td><td class="r">₦22–₦35M</td><td class="r g">Year 2–3</td></tr>
+      <tr><td class="b am">Option B — Land Expansion</td><td>Acquire 50+ acres (200,000 sqm) open field in Ota</td><td class="r">₦60–₦85M total</td><td class="r am">Year 3–4</td></tr>
+      <tr><td class="b">Option C — Prymepoint + Ota (35k sqm) + B2B contracts</td><td>Add Ota 20k sqm + secure 3+ corporate supply contracts</td><td class="r">₦25–₦40M total</td><td class="r">Year 3</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box g">
+    <p><strong>The honest bottom line:</strong> ₦7–13M Year 1 net profit on ₦2.9M startup is still a remarkable 240–450% ROI in 12 months. That beats every savings account, most stocks, and most small business investments in Nigeria. It is not ₦50M — but it is genuinely excellent for a first-year farm. Year 3 (₦23M) with the same land, improved management, and better buyer relationships is fully credible. ₦50M requires deliberate expansion — which Year 1 profits fund.</p>
+  </div>
+
+  <div class="fb"><span>Agrofini West Africa Limited — Farm SOP 2026</span><span>Confidential · Page 2</span></div>
+</div>
+
+
+<!-- ══════════ FARM FUNDAMENTALS SOP ══════════ -->
+<div class="pb"></div>
+<div class="ph">
+  <div class="sl">Section 02 — Universal Protocols</div>
+  <h2>Farm Management Fundamentals — Rules That Apply to Every Crop</h2>
+  <p>These protocols must be in place before the first seed goes in the ground.</p>
+</div>
+<div class="dp">
+
+  <h3>2.1 Soil Preparation Standard</h3>
+  <div class="trc" style="margin-bottom:5mm;">
+    <div>
+      <h4>Step 1 — Soil Test (Week 0)</h4>
+      <p>Send soil samples to IITA Ibadan (Oyo Road) or Ogun State Agricultural Development Programme (ADP) lab. Test for pH, nitrogen (N), phosphorus (P), potassium (K), and organic matter. Cost: ₦10,000–₦20,000. This single test saves ₦500,000+ in wrong fertiliser decisions.</p>
+      <p><strong>Target soil pH:</strong> 6.0–6.8 for all vegetables. Below 5.8 = apply agricultural lime (1–2 tonnes/ha) 2 weeks before planting.</p>
+    </div>
+    <div>
+      <h4>Step 2 — Primary Tillage (Week 1)</h4>
+      <p><strong>Ploughing depth: 25–30cm.</strong> This is non-negotiable. Shallow ploughing (10–15cm) cripples root development and reduces yield by 25–40%. Hire a tractor — do not substitute with hand hoes for this step.</p>
+      <p>Plough 2–3 weeks before planting to allow weed seeds to germinate and die before crop establishment.</p>
+    </div>
+    <div>
+      <h4>Step 3 — Bed Preparation (Week 1–2)</h4>
+      <p>Harrow to break clods. Form raised beds 15–20cm high for all crops (prevents waterlogging). Beds: 1.0–1.2m wide with 40–50cm working paths between. Raised beds are especially critical for pepper, tomatoes, and bell pepper which are susceptible to root rot in standing water.</p>
+    </div>
+  </div>
+
+  <h3>2.2 Water Management Protocol</h3>
+  <table>
+    <thead><tr><th>Growth Stage</th><th>Watering Frequency</th><th>Amount per Plant</th><th>Method</th><th>Critical Notes</th></tr></thead>
+    <tbody>
+      <tr><td class="b">Germination / Seedling (Week 1–2)</td><td>Twice daily (morning + evening)</td><td>Light — keep moist, never waterlogged</td><td>Watering can or hand hose</td><td>Never use pump pressure directly on seedlings — displaces roots</td></tr>
+      <tr><td class="b">Vegetative growth (Week 2–6)</td><td>Every 2 days (rainy season) / Daily (dry)</td><td>5–10L per sqm</td><td>Hose or drip if available</td><td>Water at root zone, not on leaves — wet leaves = disease entry point</td></tr>
+      <tr><td class="b">Flowering (critical stage)</td><td>Daily without fail</td><td>10–15L per sqm</td><td>Drip / base watering</td><td>One dry day at flowering drops yield 20–35%. Priority irrigation stage.</td></tr>
+      <tr><td class="b">Fruit development</td><td>Every 2 days</td><td>10L per sqm</td><td>Base watering</td><td>Consistent moisture = uniform fruit size. Fluctuation causes blossom-end rot (tomatoes) and cracking.</td></tr>
+      <tr><td class="b">Pre-harvest (1 week before)</td><td>Reduce by 50%</td><td>5L per sqm</td><td>—</td><td>Reducing water pre-harvest improves sugar content and shelf life for most crops. Do NOT cut off completely.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>2.3 Record-Keeping SOP (Non-Negotiable)</h3>
+  <div class="box g">
+    <p><strong>Every farm activity must be recorded.</strong> A farm without records cannot be managed. It cannot be improved. It cannot be presented to investors. It cannot be replicated at Ota. The farm supervisor must complete this daily log every evening without exception.</p>
+  </div>
+  <table>
+    <thead><tr><th>Record Type</th><th>What to Log</th><th>Frequency</th><th>Format</th></tr></thead>
+    <tbody>
+      <tr><td class="b">Daily Activity Log</td><td>Work done, zones worked, workers present, weather observation</td><td>Daily</td><td>A4 notebook — date, time, action, who did it</td></tr>
+      <tr><td class="b">Input Record</td><td>Every fertiliser, pesticide, seed purchased — date, product name, quantity, cost, zone applied</td><td>Every application</td><td>Input register book</td></tr>
+      <tr><td class="b">Harvest Record</td><td>Zone, crop, weight harvested, buyer, price received, transport cost</td><td>Every harvest</td><td>Harvest log with running total per crop</td></tr>
+      <tr><td class="b">Financial Summary</td><td>Weekly total income vs. total spend per zone</td><td>Weekly</td><td>Simple two-column: In / Out</td></tr>
+      <tr><td class="b">Pest/Disease Sighting</td><td>Crop affected, pest/disease identified, zone, spray applied, response time</td><td>Any sighting immediately</td><td>Pest log — critical for pattern recognition across seasons</td></tr>
+    </tbody>
+  </table>
+
+  <h3>2.4 Integrated Pest Management (IPM) — Universal Protocol</h3>
+  <div class="tc">
+    <div>
+      <h4>Prevention First</h4>
+      <ul>
+        <li>Scout all zones <strong>twice weekly</strong> — early morning, walk every bed. Look under leaves. Catch pest outbreaks at 5 insects, not 500.</li>
+        <li>Remove and burn (do not compost) any diseased plants immediately. Do not carry infected plant material through clean zones.</li>
+        <li>Rotate crops — never plant the same crop family in the same bed two consecutive seasons. This breaks pest and disease cycles more effectively than any chemical.</li>
+        <li>Maintain clean farm paths — overgrown weeds on paths are pest refuges that reinvade crops at night.</li>
+        <li>Quarantine all new planting material (setts, seedlings from outside) for 1 week before introducing to farm.</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Spray Discipline</h4>
+      <ul>
+        <li><strong>ALWAYS wear gloves, goggles, and a mask when mixing and applying.</strong> No exception. Never eat or touch your face during spraying.</li>
+        <li>Read every label. Mix only the prescribed rate — over-application burns plants and kills beneficial insects; under-application builds resistance.</li>
+        <li>Spray <strong>early morning (6–8am) or late afternoon (4–6pm)</strong> only. Never spray in full midday sun — chemicals degrade and plant tissue burns.</li>
+        <li>Do not spray within 7 days of harvest for most chemicals. Check label for Pre-Harvest Interval (PHI).</li>
+        <li>Rotate chemical classes — use different active ingredients in rotation to prevent resistance building.</li>
+        <li>Wash sprayer thoroughly after each chemical — residues react badly and damage next crop.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="fb"><span>Agrofini West Africa Limited — Farm SOP 2026</span><span>Confidential · Page 3</span></div>
+</div>
+
+
+<!-- ══════════ CROP SOPs ══════════ -->
+<div class="pb"></div>
+<div class="ph">
+  <div class="sl">Section 03 — Crop SOPs</div>
+  <h2>Standard Operating Procedures: Crop by Crop</h2>
+  <p>From seed to market. Every protocol a farm supervisor needs to manage each crop correctly.</p>
+</div>
+<div class="dp">
+
+  <!-- ═══ CUCUMBER ═══ -->
+  <div class="crop-sop">
+    <div class="crop-sop-header hc-1">
+      <div>
+        <h3>01 — Cucumber &nbsp;<em style="font-size:9pt;font-weight:400;font-style:italic;">Cucumis sativus</em></h3>
+        <div class="meta">Victory F1 · Darina F1 · Poinsett 76 · Ashley</div>
+      </div>
+      <div class="badge">Days to Harvest: 45–55 · Yield: 2.0–3.0 kg/sqm/cycle · ROI/cycle: 180–280%</div>
+    </div>
+    <div class="cs-quick">
+      <div class="csq"><div class="v">Direct Sow</div><div class="l">No Nursery</div></div>
+      <div class="csq"><div class="v">60×100cm</div><div class="l">Spacing</div></div>
+      <div class="csq"><div class="v">6 cycles/yr</div><div class="l">Possible</div></div>
+      <div class="csq"><div class="v">NPK 15-15-15</div><div class="l">Base Fertiliser</div></div>
+      <div class="csq"><div class="v">45–55 days</div><div class="l">First Harvest</div></div>
+      <div class="csq"><div class="v">2,000 sqm</div><div class="l">Zone A Size</div></div>
+    </div>
+    <div class="crop-sop-body">
+      <div class="tc">
+        <div>
+          <h4>Land Preparation &amp; Planting SOP</h4>
+          <div class="sop-step"><div class="step-num">1</div><p><strong>Prepare raised beds 20cm high, 1m wide.</strong> Cucumber roots do not tolerate waterlogging — even 12 hours of standing water kills the crop. Good drainage is essential.</p></div>
+          <div class="sop-step"><div class="step-num">2</div><p><strong>Apply base fertiliser before planting:</strong> NPK 15-15-15 at 200 kg/ha (20g per sqm). Mix into top 10cm of bed soil at least 3 days before sowing.</p></div>
+          <div class="sop-step"><div class="step-num">3</div><p><strong>Sow 2 seeds per hole, 2cm deep.</strong> Spacing: 60cm between plants, 100cm between rows. After germination (4–6 days), thin to 1 plant per hole — leave the strongest seedling.</p></div>
+          <div class="sop-step"><div class="step-num">4</div><p><strong>Optional: trellis system.</strong> Single string or net trellis at 1.5m height increases air circulation, reduces disease pressure, and allows easier harvesting. Adds ₦30,000/1,000 sqm setup cost but yields improve 15–20%.</p></div>
+
+          <h4 style="margin-top:3mm;">Fertilisation Schedule</h4>
+          <table class="fert-schedule">
+            <tr><th>Timing</th><th>Product</th><th>Rate</th><th>Method</th></tr>
+            <tr><td>Day 0 (base)</td><td>NPK 15-15-15</td><td>200 kg/ha</td><td>Incorporate into bed</td></tr>
+            <tr><td>Day 10–14 (establishment)</td><td>Urea (46-0-0)</td><td>50 kg/ha</td><td>Side-dress along row</td></tr>
+            <tr><td>Day 21–25 (pre-flower)</td><td>NPK 12-12-17</td><td>150 kg/ha</td><td>Side-dress</td></tr>
+            <tr><td>Day 28–35 (flowering)</td><td>Calcium nitrate</td><td>2g/L foliar</td><td>Weekly foliar spray</td></tr>
+            <tr><td>Day 35–45 (fruiting)</td><td>Potassium sulphate</td><td>3g/L foliar</td><td>Weekly foliar spray</td></tr>
+          </table>
+        </div>
+        <div>
+          <h4>Pest &amp; Disease Management</h4>
+          <table class="pest-table">
+            <thead><tr style="background:var(--re);color:#fff;"><th style="padding:2mm;">Pest / Disease</th><th style="padding:2mm;">Symptoms</th><th style="padding:2mm;">Treatment</th></tr></thead>
+            <tbody>
+              <tr><td class="pest-name">Downy Mildew</td><td style="font-size:8pt;padding:1.5mm;">Yellow angular spots on upper leaf; grey/purple fuzz underneath</td><td class="treatment" style="font-size:8pt;padding:1.5mm;">Ridomil Gold (Metalaxyl) 2.5g/L — preventative weekly from Week 2. Increase to twice weekly in wet season.</td></tr>
+              <tr><td class="pest-name">Cucumber Mosaic Virus</td><td style="font-size:8pt;padding:1.5mm;">Mosaic patterns, leaf distortion, stunted growth</td><td class="treatment" style="font-size:8pt;padding:1.5mm;">NO CURE. Remove and burn affected plants immediately. Prevent: use resistant varieties (Victory F1), control aphids that spread virus.</td></tr>
+              <tr><td class="pest-name">Aphids</td><td style="font-size:8pt;padding:1.5mm;">Clusters on new growth and undersides of leaves; sticky residue</td><td class="treatment" style="font-size:8pt;padding:1.5mm;">Confidor (Imidacloprid) 1ml/L from Week 3 — weekly. Controls both aphids and whitefly.</td></tr>
+              <tr><td class="pest-name">Fruit Fly</td><td style="font-size:8pt;padding:1.5mm;">Scarred, rotting cucumbers on plant; larvae inside fruit</td><td class="treatment" style="font-size:8pt;padding:1.5mm;">Protein bait traps (Mix molasses + Malathion). Collect and dispose of fallen fruit daily.</td></tr>
+              <tr><td class="pest-name">Red Spider Mite</td><td style="font-size:8pt;padding:1.5mm;">Fine webbing on leaf undersides; bronze/rusty appearance</td><td class="treatment" style="font-size:8pt;padding:1.5mm;">Abamectin (Dynamec) 1ml/L. Mites thrive in dry conditions — maintain irrigation consistency.</td></tr>
+            </tbody>
+          </table>
+          <div class="alert"><strong>⚠ Critical:</strong> Never replant cucumber (or any cucurbit — melon, pumpkin) in the same zone in back-to-back cycles without a rotation break. Fusarium wilt builds up in soil. After every 2 cycles, grow a non-cucurbit crop for at least 1 cycle.</div>
+
+          <h4>Harvesting Protocol</h4>
+          <div class="sop-step"><div class="step-num am">H</div><p><strong>Harvest every 2 days once first cucumber appears.</strong> Do NOT wait for full size — harvest at 18–22cm length for wholesale, 20–25cm for hotel/supermarket market. Overripe cucumbers turn yellow and are unsaleable.</p></div>
+          <div class="sop-step"><div class="step-num am">H</div><p>Use a sharp knife or scissors — never pull. Pulling damages the vine and opens disease entry points. Leave a 2–3cm stem on each cucumber.</p></div>
+          <div class="sop-step"><div class="step-num am">H</div><p>Grade on harvest: A-grade (uniform, no blemish) → hotels/supermarkets. B-grade (slight curve, minor mark) → Mile 12 wholesale. C-grade → okra/local cooking buyers. Never mix grades in one crate.</p></div>
+          <div class="tip"><strong>💡 Tip:</strong> Harvest early morning (6–8am) when temperatures are lowest. Cucumbers harvested in afternoon heat have 40% shorter shelf life. Pack in ventilated plastic crates — never in sealed bags.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══ TOMATOES ═══ -->
+  <div class="crop-sop">
+    <div class="crop-sop-header hc-2">
+      <div>
+        <h3>02 — Tomatoes &nbsp;<em style="font-size:9pt;font-weight:400;font-style:italic;">Lycopersicon esculentum</em></h3>
+        <div class="meta">UC82B · Roma VF · Padma F1 · Beske F1 (early harvest, disease resistant)</div>
+      </div>
+      <div class="badge">Days to Harvest: 75–90 · Yield: 1.5–2.5 kg/sqm · ROI/cycle: 300–600%</div>
+    </div>
+    <div class="cs-quick">
+      <div class="csq"><div class="v">Nursery</div><div class="l">Required (4 wks)</div></div>
+      <div class="csq"><div class="v">50×60cm</div><div class="l">Spacing</div></div>
+      <div class="csq"><div class="v">2 seasons/yr</div><div class="l">Possible</div></div>
+      <div class="csq"><div class="v">NPK+CAN</div><div class="l">Key Fertilisers</div></div>
+      <div class="csq"><div class="v">75–90 days</div><div class="l">First Harvest</div></div>
+      <div class="csq"><div class="v">2,500 sqm</div><div class="l">Zone C Size</div></div>
+    </div>
+    <div class="crop-sop-body">
+      <div class="tc">
+        <div>
+          <h4>Nursery Protocol (Critical — Do Not Skip)</h4>
+          <div class="sop-step"><div class="step-num">1</div><p><strong>Nursery medium:</strong> Mix top soil : sand : compost in 1:1:1 ratio. Fill nursery trays or black polythene bags. Sow 2 seeds per cell, 0.5cm deep. Keep in shade net (50%).</p></div>
+          <div class="sop-step"><div class="step-num">2</div><p><strong>Germination:</strong> 5–8 days at 25–30°C. Water twice daily with a watering can — never flood. If outdoor temperature drops below 18°C at night, cover nursery with clear polythene.</p></div>
+          <div class="sop-step"><div class="step-num">3</div><p><strong>Hardening off (Week 3):</strong> Move seedlings from full shade to 30% shade for 5 days before transplanting. This acclimatises them to field conditions and reduces transplant shock by 60–70%.</p></div>
+          <div class="sop-step"><div class="step-num">4</div><p><strong>Transplant at 4–5 leaf stage</strong> (25–30 days after sowing). Water nursery beds thoroughly 2 hours before transplanting — roots should come out intact.</p></div>
+
+          <h4 style="margin-top:3mm;">Field Planting</h4>
+          <div class="sop-step"><div class="step-num">5</div><p>Transplant in the afternoon or on a cloudy day — never midday sun. Transplant shock is the biggest killer of early-stage tomato crops.</p></div>
+          <div class="sop-step"><div class="step-num">6</div><p>Spacing: 50cm between plants × 60cm between rows = 33,000 plants/ha (3,300 plants per 1,000 sqm). Apply 1L water per plant immediately after transplanting.</p></div>
+          <div class="sop-step"><div class="step-num">7</div><p><strong>Stake every plant</strong> with a 1.2m bamboo stake within 1 week of transplanting — before the plant needs it. Installing stakes after flowering disturbs roots.</p></div>
+
+          <h4 style="margin-top:3mm;">Fertilisation Schedule</h4>
+          <table class="fert-schedule">
+            <tr><th>Timing</th><th>Product</th><th>Rate</th><th>Purpose</th></tr>
+            <tr><td>Transplant day</td><td>DAP (18-46-0) or NPK 15-15-15</td><td>200 kg/ha in beds</td><td>Root establishment</td></tr>
+            <tr><td>2 weeks after transplant</td><td>CAN (calcium ammonium nitrate)</td><td>100 kg/ha side-dress</td><td>Vegetative push</td></tr>
+            <tr><td>4 weeks (first flower bud)</td><td>NPK 12-12-17</td><td>200 kg/ha</td><td>Flower support, potassium boost</td></tr>
+            <tr><td>Flowering (weekly)</td><td>Calcium nitrate foliar</td><td>2g/L spray</td><td>Prevents blossom-end rot</td></tr>
+            <tr><td>Fruit set</td><td>Potassium sulphate</td><td>3g/L foliar weekly</td><td>Fruit size and firmness</td></tr>
+            <tr><td>Every 2 weeks</td><td>Boron (Borax) foliar</td><td>1g/L</td><td>Prevents flower drop</td></tr>
+          </table>
+        </div>
+        <div>
+          <h4>Pest &amp; Disease Management</h4>
+          <table class="pest-table">
+            <thead><tr style="background:var(--re);color:#fff;"><th style="padding:2mm;">Pest / Disease</th><th style="padding:2mm;">Symptoms</th><th style="padding:2mm;">Treatment / Prevention</th></tr></thead>
+            <tbody>
+              <tr><td class="pest-name">Tuta absoluta (Tomato Leaf Miner) ★ TOP THREAT</td><td style="font-size:8pt;padding:1.5mm;">Silvery mines in leaves; holes in fruit; caterpillars inside tomatoes</td><td class="treatment" style="font-size:8pt;padding:1.5mm;"><strong>Coragen (Chlorantraniliprole) 0.4ml/L weekly from Week 3.</strong> This pest destroys entire crops in 2 weeks if uncontrolled. Zero tolerance. Rotate to Tracer (Spinosad) alternate weeks for resistance management.</td></tr>
+              <tr><td class="pest-name">Early Blight (Alternaria)</td><td style="font-size:8pt;padding:1.5mm;">Brown circular lesions with concentric rings on older leaves; dark stem lesions</td><td class="treatment" style="font-size:8pt;padding:1.5mm;">Mancozeb 2g/L preventative every 7–10 days from Week 4. Copper-based fungicides (Funguran) for severe cases.</td></tr>
+              <tr><td class="pest-name">Bacterial Wilt</td><td style="font-size:8pt;padding:1.5mm;">Sudden wilting of entire plant; brown vascular tissue in stem cross-section</td><td class="treatment" style="font-size:8pt;padding:1.5mm;">NO CURE. Remove and burn immediately. Soil drenching with bleach solution. Do not plant tomatoes in that bed for 2+ seasons. Use resistant varieties.</td></tr>
+              <tr><td class="pest-name">Blossom-End Rot</td><td style="font-size:8pt;padding:1.5mm;">Dark leathery patch at fruit base (blossom end)</td><td class="treatment" style="font-size:8pt;padding:1.5mm;">Not a pathogen — calcium deficiency + irregular watering. Apply calcium nitrate foliar weekly. Maintain consistent irrigation.</td></tr>
+              <tr><td class="pest-name">Whitefly</td><td style="font-size:8pt;padding:1.5mm;">Tiny white insects under leaves; honeydew leading to sooty mould</td><td class="treatment" style="font-size:8pt;padding:1.5mm;">Confidor (Imidacloprid) 1ml/L. Yellow sticky traps for monitoring. Whitefly also transmits TYLCV virus — control is critical.</td></tr>
+            </tbody>
+          </table>
+          <div class="alert"><strong>⚠ Never miss a Tuta absoluta spray.</strong> One missed week in a Tuta outbreak = 40–60% yield loss. In heavy infestations, 100% loss within 3 weeks. Scout twice weekly — look inside the fruit and inside leaf folds, not just on leaf surfaces.</div>
+
+          <h4>Harvesting Protocol</h4>
+          <div class="sop-step"><div class="step-num am">H</div><p>Harvest when fruit is 80–90% red (not fully red). Tomatoes continue ripening off-vine. If selling to Mile 12 same day: 80% red is correct. If selling next day after overnight trip: harvest at 70% colour.</p></div>
+          <div class="sop-step"><div class="step-num am">H</div><p>Harvest in the morning. Pack in ventilated crates, 15–20kg per crate. Never pile tomatoes more than 2 crates high during transport.</p></div>
+          <div class="tip"><strong>💡 Price Tip:</strong> Monitor Mile 12 prices the week before your harvest. If prices are crashing (June–July glut season), contact supermarket and hotel buyers directly and negotiate a direct supply deal at ₦280–₦350/kg even when wholesale drops to ₦150. Your harvest quality will get you the meeting.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fb"><span>Agrofini West Africa Limited — Farm SOP 2026</span><span>Confidential · Page 4</span></div>
+</div>
+
+
+<!-- ═══ PEPPER + BELL PEPPER ═══ -->
+<div class="pb"></div>
+<div class="dp" style="padding-top:8mm;">
+
+  <!-- PEPPER -->
+  <div class="crop-sop">
+    <div class="crop-sop-header hc-3">
+      <div>
+        <h3>03 — Pepper — Tatashe, Scotch Bonnet, Shombo &nbsp;<em style="font-size:9pt;">Capsicum annuum / chinense</em></h3>
+        <div class="meta">Tarino F1 · Rodo local · Tatase · Shombo local — Do not mix varieties in same bed</div>
+      </div>
+      <div class="badge">Days to Harvest: 90–120 · Yield: 1.0–2.0 kg/sqm · ROI: 400–900%</div>
+    </div>
+    <div class="cs-quick">
+      <div class="csq"><div class="v">Nursery</div><div class="l">Required (4–5 wks)</div></div>
+      <div class="csq"><div class="v">45–60cm</div><div class="l">Plant Spacing</div></div>
+      <div class="csq"><div class="v">2 seasons/yr</div><div class="l">Possible</div></div>
+      <div class="csq"><div class="v">NPK+Kali</div><div class="l">Key Fertilisers</div></div>
+      <div class="csq"><div class="v">90–120 days</div><div class="l">First Harvest</div></div>
+      <div class="csq"><div class="v">Continuous</div><div class="l">Harvest Period</div></div>
+    </div>
+    <div class="crop-sop-body">
+      <div class="tc">
+        <div>
+          <h4>Planting &amp; Agronomy</h4>
+          <div class="sop-step"><div class="step-num">1</div><p><strong>Nursery:</strong> Same protocol as tomatoes. Pepper seeds are slower — allow 4–5 weeks nursery time. Germination is 7–14 days (slower than tomato). Keep nursery warm (25–30°C). Pre-soak seeds in warm water for 12 hours to improve germination rate.</p></div>
+          <div class="sop-step"><div class="step-num">2</div><p><strong>Transplant at 5–6 leaf stage.</strong> Pepper is more transplant-sensitive than tomatoes — harden off for a full week. Transplant on overcast afternoon only.</p></div>
+          <div class="sop-step"><div class="step-num">3</div><p><strong>Spacing:</strong> Tatashe (large): 60cm × 60cm. Scotch bonnet: 45cm × 45cm. Shombo/cayenne: 30cm × 45cm. Stake tatashe and scotch bonnet — fruit weight will break branches.</p></div>
+          <div class="sop-step"><div class="step-num">4</div><p><strong>Pinching:</strong> Remove the first flower bud (terminal bud before branching) — this delays first fruit but produces a much stronger, more productive plant. Most farmers skip this step and lose 20–30% of total yield.</p></div>
+          <h4 style="margin-top:3mm;">Fertilisation</h4>
+          <table class="fert-schedule">
+            <tr><th>Week</th><th>Product</th><th>Rate &amp; Method</th></tr>
+            <tr><td>Planting</td><td>NPK 20-10-10</td><td>200 kg/ha in bed</td></tr>
+            <tr><td>Week 3</td><td>CAN side-dress</td><td>100 kg/ha</td></tr>
+            <tr><td>Week 6 (pre-flower)</td><td>NPK 10-10-20 (high K)</td><td>200 kg/ha side-dress</td></tr>
+            <tr><td>Flowering weekly</td><td>Calcium nitrate + Boron</td><td>2g/L + 1g/L foliar</td></tr>
+            <tr><td>Fruiting weekly</td><td>Potassium sulphate</td><td>3g/L foliar</td></tr>
+          </table>
+        </div>
+        <div>
+          <h4>Pests &amp; Diseases</h4>
+          <table class="pest-table">
+            <thead><tr style="background:var(--re);color:#fff;"><th style="padding:2mm;">Threat</th><th style="padding:2mm;">Treatment</th></tr></thead>
+            <tbody>
+              <tr><td class="pest-name">Aphids ★ Top Threat</td><td class="treatment" style="font-size:8pt;padding:1.5mm;">Confidor 1ml/L weekly from Week 3. Aphids spread Pepper Mottle Virus — delayed treatment causes permanent crop stunting. Use yellow sticky traps to monitor population.</td></tr>
+              <tr><td class="pest-name">Thrips</td><td class="treatment" style="font-size:8pt;padding:1.5mm;">Tracer (Spinosad) 0.5ml/L. Thrips cause flower drop and stunted fruits. Blue sticky traps for monitoring.</td></tr>
+              <tr><td class="pest-name">Phytophthora Root Rot</td><td class="treatment" style="font-size:8pt;padding:1.5mm;">Prevention only: ensure excellent drainage, raised beds. Ridomil Gold drench at first sign of wilting. Remove and destroy affected plants.</td></tr>
+              <tr><td class="pest-name">Cercospora Leaf Spot</td><td class="treatment" style="font-size:8pt;padding:1.5mm;">Mancozeb 2g/L preventative spray every 10 days in wet season.</td></tr>
+            </tbody>
+          </table>
+          <h4 style="margin-top:3mm;">Harvesting + Value-Add</h4>
+          <div class="sop-step"><div class="step-num am">H</div><p>Pepper is a <strong>continuous harvest crop</strong> — once it starts, pick every 7–10 days. Leaving over-ripe fruit on plant signals the plant to stop flowering.</p></div>
+          <div class="sop-step"><div class="step-num am">H</div><p>Tatashe: harvest at full red (or green stage for green pepper market). Scotch bonnet: full orange-red. Shombo: full red.</p></div>
+          <div class="sop-step"><div class="step-num am">H</div><p><strong>Drying Shombo (2× price):</strong> Spread harvested shombo on clean tarpaulins in full sun for 10–14 days. Turn daily. Dried to moisture content below 12%. Store in clean woven sacks in dry, ventilated store. Dried shombo: ₦2,000–₦4,500/kg vs ₦400–₦700/kg fresh.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BELL PEPPER -->
+  <div class="crop-sop">
+    <div class="crop-sop-header hc-4">
+      <div>
+        <h3>04 — Bell Pepper (Sweet Pepper) &nbsp;<em style="font-size:9pt;">Capsicum annuum (sweet)</em></h3>
+        <div class="meta">California Wonder · Yolo Wonder · Aristotle F1 · Red Knight F1 — Highest value crop on farm</div>
+      </div>
+      <div class="badge">Days to Harvest: 90–120 · Yield: 1.5–2.5 kg/sqm · Price: ₦600–₦1,500/kg</div>
+    </div>
+    <div class="cs-quick">
+      <div class="csq"><div class="v">Nursery</div><div class="l">Required (4 wks)</div></div>
+      <div class="csq"><div class="v">60×60cm</div><div class="l">Spacing</div></div>
+      <div class="csq"><div class="v">Buy Confirmed</div><div class="l">Before Planting</div></div>
+      <div class="csq"><div class="v">Ca+K Critical</div><div class="l">Fertiliser</div></div>
+      <div class="csq"><div class="v">Grade A Only</div><div class="l">B2B Standard</div></div>
+      <div class="csq"><div class="v">1,500 sqm</div><div class="l">Zone E Size</div></div>
+    </div>
+    <div class="crop-sop-body">
+      <div class="tc">
+        <div>
+          <h4>Why Bell Pepper Needs Special Treatment</h4>
+          <p>Bell pepper earns 3–5× the price of tatashe, but it requires more precise management and — critically — a <strong>pre-arranged buyer before a single seed is planted</strong>. It does not sell well at Mile 12 wholesale — it is a premium B2B product for hotels, supermarkets, and fast-food chains.</p>
+          <div class="sop-step"><div class="step-num">1</div><p><strong>Nursery:</strong> 4 weeks. Bell pepper is more temperature-sensitive than tatashe — maintain 22–28°C for germination. Below 18°C: germination fails. Do not use rainy season for first cycle if you can't protect the nursery.</p></div>
+          <div class="sop-step"><div class="step-num">2</div><p><strong>Season timing:</strong> Plant S1 in February (nursery January) for May–July harvest. Plant S2 in August (nursery July) for November–January harvest. Avoid planting when daytime temperatures exceed 35°C consistently — flower drop becomes excessive above this threshold.</p></div>
+          <div class="sop-step"><div class="step-num">3</div><p><strong>Calcium is critical</strong> for bell pepper specifically. Blossom-end rot is the #1 quality problem. Apply calcium nitrate foliar every 7 days from first flower bud. Never let irrigation run dry — calcium uptake requires consistent soil moisture.</p></div>
+          <div class="sop-step"><div class="step-num">4</div><p><strong>Colour development:</strong> Most bell pepper is harvested green. To achieve red/yellow/orange (premium price 30–40% higher), leave fruit on plant 3–4 additional weeks after green maturity. The plant needs extra potassium during this stage.</p></div>
+        </div>
+        <div>
+          <h4>Quality Standards (B2B requirement)</h4>
+          <ul>
+            <li><strong>Grade A (hotel/supermarket):</strong> Uniform size 150–200g, fully developed lobes (3–4), firm skin, no blemishes, smooth surface. 90% of Zone E harvest should meet this standard.</li>
+            <li><strong>Grade B:</strong> Slightly irregular shape, minor cosmetic issues — sell to wholesale/market at standard pepper price.</li>
+            <li>Pack in single-layer ventilated trays or clamshell packs for hotel delivery. Never bag in nylon sacks.</li>
+          </ul>
+
+          <h4 style="margin-top:3mm;">Key Pests</h4>
+          <table class="pest-table">
+            <thead><tr style="background:var(--re);color:#fff;"><th style="padding:2mm;">Threat</th><th style="padding:2mm;">Treatment</th></tr></thead>
+            <tbody>
+              <tr><td class="pest-name">Thrips</td><td class="treatment" style="font-size:8pt;padding:1.5mm;">Tracer or Radiant (Spinosad) every 7 days from Week 3. Critical — thrips scar bell pepper fruit surface, rendering it unsaleable as Grade A.</td></tr>
+              <tr><td class="pest-name">Blossom-End Rot</td><td class="treatment" style="font-size:8pt;padding:1.5mm;">Calcium nitrate 3g/L weekly foliar. Consistent irrigation. This is the #1 cause of grade rejection.</td></tr>
+              <tr><td class="pest-name">Anthracnose (fruit rot)</td><td class="treatment" style="font-size:8pt;padding:1.5mm;">Copper oxychloride (Funguran) 3g/L preventative spray from fruit formation. Common in high-humidity seasons.</td></tr>
+            </tbody>
+          </table>
+          <div class="alert"><strong>⚠ Non-Negotiable:</strong> Do not plant bell pepper without a confirmed buyer who has agreed to a price before planting. If you cannot confirm a buyer, convert Zone E to tatashe pepper (same management, guaranteed market). Never gamble ₦500,000+ in inputs on an unconfirmed buyer.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fb"><span>Agrofini West Africa Limited — Farm SOP 2026</span><span>Confidential · Page 5</span></div>
+</div>
+
+
+<!-- ═══ UGWU + OKRA ═══ -->
+<div class="pb"></div>
+<div class="dp" style="padding-top:8mm;">
+
+  <!-- UGWU -->
+  <div class="crop-sop">
+    <div class="crop-sop-header hc-5">
+      <div>
+        <h3>05 — Ugwu (Fluted Pumpkin) &nbsp;<em style="font-size:9pt;">Telfairia occidentalis</em></h3>
+        <div class="meta">Locally: Ugu (Igbo) · Elegede ibepe (Yoruba) — Both leaves (weekly) and seeds (annual) are marketable</div>
+      </div>
+      <div class="badge">First Harvest: 30–45 days · Continuous weekly harvest · Very Low Input</div>
+    </div>
+    <div class="cs-quick">
+      <div class="csq"><div class="v">Direct Sow</div><div class="l">No Nursery</div></div>
+      <div class="csq"><div class="v">2×2m mounds</div><div class="l">Spacing</div></div>
+      <div class="csq"><div class="v">Weekly</div><div class="l">Harvest Frequency</div></div>
+      <div class="csq"><div class="v">Very Low</div><div class="l">Input Cost</div></div>
+      <div class="csq"><div class="v">12+ months</div><div class="l">Plant Duration</div></div>
+      <div class="csq"><div class="v">Payroll Crop</div><div class="l">Role on Farm</div></div>
+    </div>
+    <div class="crop-sop-body">
+      <div class="tc">
+        <div>
+          <h4>Planting Protocol</h4>
+          <div class="sop-step"><div class="step-num">1</div><p><strong>Mound preparation:</strong> Raise mounds 30–40cm high, 60–80cm diameter. Space mounds 2m × 2m. Incorporate compost or aged manure into mound before planting — this single action increases yield by 40–60%. Compost: 5–10kg per mound.</p></div>
+          <div class="sop-step"><div class="step-num">2</div><p><strong>Seed planting:</strong> Sow 2 seeds per mound, 5cm deep on the side of the mound (not the peak). Fresh seeds germinate in 5–7 days. Thin to 1 plant at 2 weeks — leave the most vigorous seedling.</p></div>
+          <div class="sop-step"><div class="step-num">3</div><p><strong>Training vines:</strong> Ugwu is a sprawling vine. In a 1,200 sqm zone, let the vines spread naturally on the ground or train on a simple bamboo and string trellis at 0.5m height. Trellised ugwu produces better leaf quality and is easier to harvest.</p></div>
+          <div class="sop-step"><div class="step-num">4</div><p><strong>Fertilisation:</strong> Apply NPK 15-15-15 at 50kg/ha as side-dress at 6 weeks. After first harvest, apply urea (30kg/ha) to push vegetative growth. Compost mulch around mounds every 3 months maintains soil structure and reduces irrigation need.</p></div>
+        </div>
+        <div>
+          <h4>Harvesting Protocol</h4>
+          <div class="sop-step"><div class="step-num am">H</div><p><strong>Harvest top shoots every 7–14 days.</strong> Cut the leading shoot with 4–5 leaves, leaving 2 leaf nodes on the stem — the plant regrows from these nodes. Never cut back to the main stem.</p></div>
+          <div class="sop-step"><div class="step-num am">H</div><p>Bundle into standard market bundles (approx 1kg fresh weight). Tie loosely — tight bundles generate heat and yellow the leaves within hours, reducing price.</p></div>
+          <div class="sop-step"><div class="step-num am">H</div><p>Spray bundles lightly with water and wrap in banana leaves or damp hessian for transport. Shelf life is 24–36 hours maximum. Same-day or next-morning market delivery is essential.</p></div>
+          <div class="sop-step"><div class="step-num am">H</div><p><strong>Market:</strong> Lagos traders visit Ogun State farm areas weekly. Build relationships with 2–3 regular traders who buy directly at farm gate. This eliminates transport cost and ensures guaranteed weekly offtake.</p></div>
+          <div class="tip"><strong>💡 Extended Use:</strong> After 12–14 months, plants begin to decline. Before clearing, collect mature seeds from large fruits (1–2kg per large fruit). Seeds sell at ₦1,500–₦3,000/kg — a bonus harvest with zero additional input cost.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OKRA -->
+  <div class="crop-sop">
+    <div class="crop-sop-header hc-6">
+      <div>
+        <h3>06 — Okra &nbsp;<em style="font-size:9pt;">Abelmoschus esculentus</em></h3>
+        <div class="meta">NHAe 47-4 · Clemson Spineless · LD88 · Local varieties (higher disease susceptibility — avoid for commercial scale)</div>
+      </div>
+      <div class="badge">Days to Harvest: 50–60 · Yield: 0.8–1.5 kg/sqm/cycle · 3 cycles/year</div>
+    </div>
+    <div class="cs-quick">
+      <div class="csq"><div class="v">Direct Sow</div><div class="l">No Nursery</div></div>
+      <div class="csq"><div class="v">30×60cm</div><div class="l">Spacing</div></div>
+      <div class="csq"><div class="v">Every 2 days</div><div class="l">Harvest Freq.</div></div>
+      <div class="csq"><div class="v">NPK+Urea</div><div class="l">Fertiliser</div></div>
+      <div class="csq"><div class="v">50–60 days</div><div class="l">First Harvest</div></div>
+      <div class="csq"><div class="v">800 sqm</div><div class="l">Zone B-2 Size</div></div>
+    </div>
+    <div class="crop-sop-body">
+      <div class="tc">
+        <div>
+          <h4>Planting &amp; Management</h4>
+          <div class="sop-step"><div class="step-num">1</div><p><strong>Pre-treatment:</strong> Soak seeds in warm water for 12–24 hours before planting. This softens the seed coat and improves germination from 60–70% to 85–90%. Discard seeds that float — they are non-viable.</p></div>
+          <div class="sop-step"><div class="step-num">2</div><p><strong>Sow direct, 2 seeds per hole, 2cm deep.</strong> Thin to 1 plant at 2 weeks. Spacing: 30cm between plants, 60cm between rows = 55,000 plants/ha.</p></div>
+          <div class="sop-step"><div class="step-num">3</div><p><strong>Fertiliser:</strong> NPK 15-15-15 at planting (200 kg/ha base). Side-dress urea (50 kg/ha) at 4 weeks. Foliar micro-nutrients (zinc + boron) at 6 weeks improves pod quality and reduces stick cracking.</p></div>
+          <div class="sop-step"><div class="step-num">4</div><p><strong>Topping:</strong> When plant reaches 1.5m height, pinch out the growing tip. This encourages lateral branching and doubles the number of fruit-bearing nodes.</p></div>
+        </div>
+        <div>
+          <h4>Pest Management</h4>
+          <table class="pest-table">
+            <thead><tr style="background:var(--re);color:#fff;"><th style="padding:2mm;">Threat</th><th style="padding:2mm;">Treatment</th></tr></thead>
+            <tbody>
+              <tr><td class="pest-name">Shoot &amp; Fruit Borer ★</td><td class="treatment" style="font-size:8pt;padding:1.5mm;">Cypermethrin 2ml/L, weekly from first flower. Look for entry holes in tender stem tips — this is the borer entry point. Infected tips wilt and drop. Remove and destroy all affected growing tips.</td></tr>
+              <tr><td class="pest-name">Aphids / Whitefly</td><td class="treatment" style="font-size:8pt;padding:1.5mm;">Confidor 1ml/L. Both spread yellowing virus. Weekly preventative from Week 3.</td></tr>
+              <tr><td class="pest-name">Nematodes (root knot)</td><td class="treatment" style="font-size:8pt;padding:1.5mm;">Rotate with non-susceptible crops. If soil test shows high nematode presence: Mocap (Ethoprophos) soil drench at planting or grow marigolds in rotation.</td></tr>
+            </tbody>
+          </table>
+          <h4 style="margin-top:3mm;">Harvesting Protocol — Critical Timing</h4>
+          <div class="sop-step"><div class="step-num am">H</div><p><strong>Harvest every 2–3 days without fail.</strong> Okra pods become tough and fibrous if left 4–5 days. Overripe okra has zero market value. This crop demands daily farm presence during harvest period.</p></div>
+          <div class="sop-step"><div class="step-num am">H</div><p>Correct harvest size: 6–10cm pods, tender when snapped. Use gloves — okra plant irritates skin. Cut with sharp scissors, not fingers — pulling damages the plant and delays next flower bud.</p></div>
+          <div class="sop-step"><div class="step-num am">H</div><p><strong>Value-Add: Dried Okra.</strong> Slice harvested okra into 1cm rounds. Blanch in hot water for 3 minutes. Sun-dry on trays for 5–7 days. Dried okra: ₦2,500–₦5,000/kg vs ₦300–₦700/kg fresh. Dried okra stores 6 months in sealed containers.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fb"><span>Agrofini West Africa Limited — Farm SOP 2026</span><span>Confidential · Page 6</span></div>
+</div>
+
+
+<!-- ═══ WATERMELON + YAM ═══ -->
+<div class="pb"></div>
+<div class="dp" style="padding-top:8mm;">
+
+  <!-- WATERMELON -->
+  <div class="crop-sop">
+    <div class="crop-sop-header hc-7">
+      <div>
+        <h3>07 — Watermelon &nbsp;<em style="font-size:9pt;">Citrullus lanatus</em></h3>
+        <div class="meta">Sugar Baby · Crimson Sweet · Charleston Grey · Topgun F1 — dry season is best season</div>
+      </div>
+      <div class="badge">Days to Harvest: 75–90 · Yield: 2.5–4.5 kg/sqm/cycle · 2 cycles/year</div>
+    </div>
+    <div class="cs-quick">
+      <div class="csq"><div class="v">Direct Sow</div><div class="l">No Nursery</div></div>
+      <div class="csq"><div class="v">2m×1.5m</div><div class="l">Spacing</div></div>
+      <div class="csq"><div class="v">Oct–Jan</div><div class="l">Best Season</div></div>
+      <div class="csq"><div class="v">NPK+K</div><div class="l">Key Fertilisers</div></div>
+      <div class="csq"><div class="v">Once</div><div class="l">Harvest Type</div></div>
+      <div class="csq"><div class="v">1,000 sqm</div><div class="l">Zone G Size</div></div>
+    </div>
+    <div class="crop-sop-body">
+      <div class="tc">
+        <div>
+          <h4>Planting &amp; Key Agronomy Rules</h4>
+          <div class="sop-step"><div class="step-num">1</div><p><strong>Best season: dry (October–January planting).</strong> Watermelon planted in the wet season suffers from fungal diseases and fruit cracking. With irrigation, dry season watermelon reaches premium price (₦200–₦280/kg vs ₦100–₦150 in rainy season).</p></div>
+          <div class="sop-step"><div class="step-num">2</div><p><strong>Spacing: 2m × 1.5m</strong> = 3,333 plants/ha. Watermelon vines spread aggressively — tight spacing = reduced fruit size and increased disease. Never be tempted to plant closer to "fit more plants in."</p></div>
+          <div class="sop-step"><div class="step-num">3</div><p><strong>Pollination:</strong> Watermelon requires bee pollination. If few bees on farm: hand-pollinate by transferring pollen from male to female flowers with a small brush between 6–10am when flowers are open. Poor pollination = deformed, hollow fruit.</p></div>
+          <div class="sop-step"><div class="step-num">4</div><p><strong>Fruit thinning:</strong> Leave only 2–3 fruits per vine. Remove excess fruits when they are tennis-ball size — concentrating plant energy into fewer fruits produces larger, sweeter, more marketable melons.</p></div>
+          <div class="sop-step"><div class="step-num">5</div><p><strong>Fertility:</strong> High-potassium phase is critical. NPK 20-20-20 first 4 weeks → switch to Potassium Sulphate or NPK 5-10-30 from fruit set. Potassium directly determines sugar content (Brix level) and market premium.</p></div>
+        </div>
+        <div>
+          <h4>Harvest Indicators — How to Know a Watermelon is Ready</h4>
+          <ul>
+            <li><strong>Tendril rule:</strong> The small tendril (curly vine) immediately adjacent to the fruit stem goes brown and dry when the melon is ripe. This is the most reliable indicator.</li>
+            <li><strong>Ground spot:</strong> The patch where the melon rests on the ground turns from white to cream/pale yellow.</li>
+            <li><strong>Sound test:</strong> Tap the melon with your knuckle — ripe melon gives a hollow "thump". Unripe gives a metallic "ping".</li>
+            <li><strong>Bloom:</strong> The waxy white coating on the melon surface dulls slightly when ripe.</li>
+          </ul>
+          <div class="alert"><strong>⚠</strong> Never harvest early — a watermelon that is cut before ripeness has zero sweetness and will not ripen off-vine. One day too early = total loss of that fruit's value. Test 3 melons from different plants before calling the entire zone ready for harvest.</div>
+          <h4 style="margin-top:3mm;">Post-Harvest</h4>
+          <ul>
+            <li>Handle gently — watermelons bruise internally without external signs. Internal bruising reduces shelf life from 3 weeks to 5–7 days.</li>
+            <li>Transport upright, single layer only. Never stack more than 2 high.</li>
+            <li>Shelf life: 2–3 weeks at room temperature. Do not refrigerate (chilling injury below 10°C).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- YAM -->
+  <div class="crop-sop">
+    <div class="crop-sop-header hc-8">
+      <div>
+        <h3>08 — White Yam &nbsp;<em style="font-size:9pt;">Dioscorea rotundata</em></h3>
+        <div class="meta">TDR 89/02665 · Amuja · Pona (premium) — IITA certified setts only for commercial scale</div>
+      </div>
+      <div class="badge">Harvest: 9–10 months · Yield: 1.5–2.5 kg/sqm · Store &amp; sell at 2× price</div>
+    </div>
+    <div class="cs-quick">
+      <div class="csq"><div class="v">Sett Planting</div><div class="l">No Nursery</div></div>
+      <div class="csq"><div class="v">1×1m mounds</div><div class="l">Spacing</div></div>
+      <div class="csq"><div class="v">Feb–Mar only</div><div class="l">Planting Window</div></div>
+      <div class="csq"><div class="v">300–450g</div><div class="l">Sett Weight</div></div>
+      <div class="csq"><div class="v">Store tubers</div><div class="l">Key Strategy</div></div>
+      <div class="csq"><div class="v">1,800 sqm</div><div class="l">Zone F Size</div></div>
+    </div>
+    <div class="crop-sop-body">
+      <div class="tc">
+        <div>
+          <h4>Planting Protocol — Non-Negotiables</h4>
+          <div class="sop-step"><div class="step-num">1</div><p><strong>Only buy IITA-certified seed yams.</strong> Planting infected or poor-quality setts is the single biggest cause of yam crop failure in Nigeria. Spend the extra money. Poor setts from local markets carry yam mosaic virus, nematodes, and rot pathogens. Certified setts from IITA Ibadan or their affiliated seed systems.</p></div>
+          <div class="sop-step"><div class="step-num">2</div><p><strong>Sett size: 300–450g.</strong> Below 250g = weak plants, poor yield. Above 500g = unnecessary expense as yield gain is marginal. Cut setts from healthy tubers using a clean knife; dust cut surfaces with wood ash or thiram fungicide immediately to prevent rot.</p></div>
+          <div class="sop-step"><div class="step-num">3</div><p><strong>Planting mounds:</strong> Mounds must be at least 30–40cm high, 80–100cm diameter. This is critical — yam tubers grow downward from the sett. If there is not enough loose soil depth, tubers grow sideways and are small, deformed, and difficult to harvest.</p></div>
+          <div class="sop-step"><div class="step-num">4</div><p><strong>Plant the sett on the upper slope of the mound, not the peak.</strong> Cover with 5–8cm of soil. Shallow planting leads to sett rotting in heat; deep planting delays emergence.</p></div>
+          <div class="sop-step"><div class="step-num">5</div><p><strong>Stake every mound</strong> with a 2.5m bamboo stake within 2 weeks of planting (before vines start climbing). Unstaked yam yields 30–40% less than staked yam. This is the most consistently ignored and most consistently costly mistake on Nigerian yam farms.</p></div>
+          <div class="sop-step"><div class="step-num">6</div><p><strong>Mulch at planting.</strong> Apply 5–10cm thick layer of dry grass, rice straw, or dry leaves over entire mound surface. Mulch retains soil moisture, reduces soil temperature, suppresses weeds, and improves tuber development. Remove mulch once vines cover the mound naturally.</p></div>
+        </div>
+        <div>
+          <h4>Fertilisation</h4>
+          <table class="fert-schedule">
+            <tr><th>Timing</th><th>Product</th><th>Rate &amp; Method</th></tr>
+            <tr><td>Planting</td><td>NPK 15-15-15</td><td>200 kg/ha — mix into mound before planting sett</td></tr>
+            <tr><td>6 weeks after emergence</td><td>Urea side-dress</td><td>100 kg/ha around mound base</td></tr>
+            <tr><td>12 weeks</td><td>NPK 12-12-17</td><td>200 kg/ha — final fertiliser application</td></tr>
+            <tr><td>Do not fertilise after Month 5</td><td colspan="2">Late fertilisation causes excessive vine growth at the expense of tuber development</td></tr>
+          </table>
+
+          <h4 style="margin-top:3mm;">The Storage Strategy — How to 2× Your Revenue</h4>
+          <div class="sop-step"><div class="step-num am">H</div><p><strong>Harvest November–December</strong> when vines die back. Dig carefully from the non-sett end of the mound with a fork (not a cutlass — never cut tubers accidentally). Market price at this point: ₦350–₦450/kg.</p></div>
+          <div class="sop-step"><div class="step-num am">H</div><p><strong>Store in a yam barn</strong> — shade structure with airflow, 50–60cm off the ground on wooden frames. Each tuber must be kept separate, not touching. Inspect weekly — remove any rotting tubers immediately before rot spreads.</p></div>
+          <div class="sop-step"><div class="step-num am">H</div><p><strong>Sell in May–July</strong> when market price peaks at ₦500–₦700/kg. The same tuber that sells at ₦400/kg in December sells at ₦600/kg in June. Store losses of 10–15% are more than offset by the 50–70% price increase.</p></div>
+          <div class="tip"><strong>💡 Intercropping opportunity:</strong> In the first 4 months after planting (before yam canopy closes), plant cucumber or okra between yam mounds. These short-cycle crops earn additional income from the same 1,800 sqm while yam establishes. Remove intercrops before yam vines start spreading aggressively at Month 4.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fb"><span>Agrofini West Africa Limited — Farm SOP 2026</span><span>Confidential · Page 7</span></div>
+</div>
+
+
+<!-- ═══ SWEET CORN ═══ -->
+<div class="pb"></div>
+<div class="dp" style="padding-top:8mm;">
+
+  <div class="crop-sop">
+    <div class="crop-sop-header hc-9">
+      <div>
+        <h3>09 — Sweet Corn / Maize &nbsp;<em style="font-size:9pt;">Zea mays saccharata</em></h3>
+        <div class="meta">Jubilee · Honey Select · Peter Corn F1 (sweet) · IITA TZEEI Maize (for grain) — rotation crop + premium fresh market</div>
+      </div>
+      <div class="badge">Days to Harvest: 90–100 · Yield: 1.0–1.8 kg/sqm · 2 cycles/year</div>
+    </div>
+    <div class="cs-quick">
+      <div class="csq"><div class="v">Direct Sow</div><div class="l">No Nursery</div></div>
+      <div class="csq"><div class="v">75×30cm</div><div class="l">Spacing</div></div>
+      <div class="csq"><div class="v">2 seasons/yr</div><div class="l">Possible</div></div>
+      <div class="csq"><div class="v">NPK+Urea</div><div class="l">Fertiliser</div></div>
+      <div class="csq"><div class="v">2–3 days</div><div class="l">Shelf Life (fresh)</div></div>
+      <div class="csq"><div class="v">Rotation crop</div><div class="l">Primary Role</div></div>
+    </div>
+    <div class="crop-sop-body">
+      <div class="tc">
+        <div>
+          <h4>Planting &amp; Management</h4>
+          <div class="sop-step"><div class="step-num">1</div><p>Sow 2 seeds per hole, 3–4cm deep. Thin to 1 at 10 days. Spacing: 75cm between rows, 30cm between plants.</p></div>
+          <div class="sop-step"><div class="step-num">2</div><p><strong>Fertilise at knee height</strong> (V6 stage, approx 4 weeks) with urea side-dress (100 kg/ha). This is the most critical fertiliser timing for corn — the "knee-high by July 4th" principle — miss this window and yield is permanently reduced.</p></div>
+          <div class="sop-step"><div class="step-num">3</div><p><strong>Fall Armyworm (FAW) — Nigeria's #1 corn pest.</strong> Apply Coragen (Chlorantraniliprole) 0.4ml/L directly into the leaf whorl at V3–V6 stage. FAW hides in the whorl during the day — spray must reach inside the funnel. Standard leaf spraying is ineffective against FAW.</p></div>
+
+          <h4 style="margin-top:3mm;">Harvest &amp; Market</h4>
+          <div class="sop-step"><div class="step-num am">H</div><p><strong>Fresh sweet corn:</strong> Harvest 18–22 days after silk emergence, when kernels are tender and milky. Shelf life is extremely short — harvest-to-market within 24 hours is essential for quality. Night harvest + early morning Lagos delivery.</p></div>
+          <div class="sop-step"><div class="step-num am">H</div><p>Roadside corn-on-cob sellers (Lagos Island, Victoria Island) pay ₦250–₦400 per cob. Retailers buy bundles. Hotels buy husk-on cobs for presentation — premium channel.</p></div>
+        </div>
+        <div>
+          <h4>Crop Rotation — Why Zone H Exists</h4>
+          <div class="box g">
+            <p><strong>Rotation breaks the pest and disease cycles</strong> that accumulate when the same crop family is grown in the same soil repeatedly. This is one of the most undervalued practices in Nigerian smallholder farming — and one of the most profitable free interventions available.</p>
+          </div>
+          <table>
+            <thead><tr><th>Zone</th><th>Season 1</th><th>Season 2</th><th>Season 3</th></tr></thead>
+            <tbody>
+              <tr><td>Zone A (cucumber)</td><td>Cucumber</td><td>Okra or beans (rotation)</td><td>Cucumber</td></tr>
+              <tr><td>Zone B (ugwu/okra)</td><td>Ugwu + Okra</td><td>Continuous</td><td>Replant Year 2</td></tr>
+              <tr><td>Zone C (tomatoes)</td><td>Tomatoes S1</td><td>Cowpea/groundnut (rotation)</td><td>Tomatoes S2</td></tr>
+              <tr><td>Zone D (pepper)</td><td>Pepper S1</td><td>Cucumber or leafy greens</td><td>Pepper S2</td></tr>
+              <tr><td>Zone G (watermelon)</td><td>Watermelon</td><td>Cucumber or okra</td><td>Watermelon</td></tr>
+            </tbody>
+          </table>
+          <div class="tip"><strong>Golden Rule:</strong> Never grow the same crop family in the same bed two consecutive seasons. Solanaceae (tomatoes, pepper) must not follow each other. Cucurbits (cucumber, watermelon, ugwu) must not follow each other. Alternating with legumes (cowpea, groundnut, beans) for one season restores soil nitrogen and breaks pest cycles — reducing pesticide costs by 30–40% in the following crop.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══ UNIVERSAL PEST REFERENCE ═══ -->
+  <h3 style="margin-top:4mm;">Universal Pesticide Quick-Reference Table</h3>
+  <p>Keep this table posted in the farm office. Every supervisor must know these products and rates before handling chemicals.</p>
+  <table>
+    <thead>
+      <tr><th>Product</th><th>Active Ingredient</th><th>Target</th><th>Rate</th><th>PHI (days before harvest)</th><th>Critical Safety Note</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="b">Coragen</td><td>Chlorantraniliprole</td><td>Lepidoptera (Tuta, FAW, borer)</td><td>0.4ml/L</td><td>1 day</td><td>Rotate with Tracer — resistance builds fast with Coragen alone</td></tr>
+      <tr><td class="b">Tracer / Radiant</td><td>Spinosad</td><td>Thrips, Tuta, FAW, caterpillars</td><td>0.5ml/L</td><td>3 days</td><td>Highly toxic to bees — never spray on open flowers</td></tr>
+      <tr><td class="b">Confidor</td><td>Imidacloprid</td><td>Aphids, whitefly, thrips</td><td>1ml/L</td><td>7 days</td><td>Do NOT use near water sources. Bee-toxic systemic. Wear full PPE.</td></tr>
+      <tr><td class="b">Cypermethrin</td><td>Cypermethrin</td><td>Borer, caterpillars, beetles</td><td>2ml/L</td><td>7 days</td><td>Broad spectrum — kills beneficial insects too. Use only when necessary.</td></tr>
+      <tr><td class="b">Ridomil Gold</td><td>Metalaxyl + Mancozeb</td><td>Downy mildew, Phytophthora</td><td>2.5g/L</td><td>14 days</td><td>Preventative — once disease is established, Ridomil is less effective</td></tr>
+      <tr><td class="b">Mancozeb</td><td>Mancozeb</td><td>Early blight, Cercospora, rust</td><td>2g/L</td><td>7 days</td><td>Protective only — does not cure existing disease. Apply on healthy tissue.</td></tr>
+      <tr><td class="b">Copper Fungicide (Funguran)</td><td>Copper oxychloride</td><td>Bacterial diseases, downy mildew, anthracnose</td><td>3g/L</td><td>14 days</td><td>Do not mix with other chemicals unless label permits. Can cause phytotoxicity in young plants.</td></tr>
+      <tr><td class="b">Abamectin (Dynamec)</td><td>Abamectin</td><td>Spider mites, leafminers</td><td>1ml/L</td><td>7 days</td><td>Highly toxic to aquatic organisms. Keep away from any water source or pond.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="alert"><strong>⚠ Pesticide Storage:</strong> All chemicals must be stored in a locked cabinet. Never in the same room as seeds or food. Keep original containers only — never transfer to unmarked bottles. Dispose of empty containers by triple-rinsing, puncturing, and burying — never burn.</div>
+
+  <div class="fb"><span>Agrofini West Africa Limited — Farm SOP 2026</span><span>Confidential · Page 8</span></div>
+</div>
+
+
+<!-- ═══ FINAL SECTION: HONEST ROADMAP ═══ -->
+<div class="pb"></div>
+<div class="ph">
+  <div class="sl">Section 04 — The True Path</div>
+  <h2>Realistic Roadmap: From ₦7M to ₦50M — What It Actually Takes</h2>
+  <p>No hallucination. Just the numbers and the decisions.</p>
+</div>
+<div class="dp">
+
+  <h3>4.1 Year-by-Year Honest Financial Progression</h3>
+  <table>
+    <thead><tr><th>Year</th><th>Farm Configuration</th><th class="r">Revenue (₦)</th><th class="r">Net Profit (₦)</th><th>Key Milestone</th></tr></thead>
+    <tbody>
+      <tr><td class="b">Year 1</td><td>15,000 sqm open field, 8 zones, learning year</td><td class="r">₦17M–₦22M</td><td class="r g">₦7M–₦13M</td><td>Farm operational, first buyer relationships built, systems working</td></tr>
+      <tr><td class="b">Year 2</td><td>15,000 sqm + improved management + bell pepper buyer confirmed</td><td class="r">₦25M–₦32M</td><td class="r g">₦14M–₦20M</td><td>Break-even on all startup capital; 3 confirmed off-takers; dry season operations</td></tr>
+      <tr><td class="b">Year 3 (Option A)</td><td>Add 1,000 sqm greenhouse on Prymepoint (from Year 2 profit)</td><td class="r">₦38M–₦52M</td><td class="r g">₦22M–₦32M</td><td>Greenhouse operational; cucumber yield × 5 per sqm in protected structure</td></tr>
+      <tr><td class="b">Year 3 (Option B)</td><td>Add Ota 20,000 sqm (35,000 sqm total) from Year 2 profit</td><td class="r">₦45M–₦68M</td><td class="r g">₦28M–₦45M</td><td>First corporate supply contract; potential ₦50M in strong years</td></tr>
+      <tr class="hi"><td class="b">Year 4</td><td>35,000 sqm + 1,000 sqm greenhouse + aquaculture (8 ponds)</td><td class="r">₦85M–₦120M</td><td class="r g b" style="color:var(--g);">₦50M–₦75M</td><td>₦50M net profit milestone — achievable and defensible</td></tr>
+    </tbody>
+  </table>
+
+  <h3>4.2 What Makes the Biggest Difference in Year 1</h3>
+  <div class="trc">
+    <div class="box g" style="margin-bottom:0;">
+      <p style="font-weight:700;color:var(--gd);margin-bottom:2mm;">Management Quality (±40% yield impact)</p>
+      <p>The difference between 2.0 kg/sqm and 3.0 kg/sqm cucumber yield is not the seeds — it is whether the farm supervisor scouted for pests on time, applied fertiliser correctly, and harvested on schedule. Better management is free. It is the highest-ROI investment on any farm.</p>
+    </div>
+    <div class="box a" style="margin-bottom:0;">
+      <p style="font-weight:700;color:#9B6310;margin-bottom:2mm;">Buyer Relationships (±50% price impact)</p>
+      <p>A farmer who sells cucumber at ₦150/kg wholesale and a farmer who sells at ₦280/kg to a hotel are growing the same crop. The ₦130/kg difference is a relationship. Building 3–5 direct buyer contacts in Year 1 — hotels, supermarkets, restaurants — is worth more than any input cost saving.</p>
+    </div>
+    <div class="box pu" style="margin-bottom:0;">
+      <p style="font-weight:700;color:var(--pu);margin-bottom:2mm;">Counter-Seasonal Farming (±100% price impact)</p>
+      <p>A borehole and pump (₦375,000 investment) enables dry-season farming when 90% of competition has no crop in the ground. Dry-season tomato at ₦500/kg vs ₦250/kg in season. This single infrastructure item more than doubles effective farm revenue without adding a single sqm of land.</p>
+    </div>
+  </div>
+
+  <h3>4.3 The Greenhouse Decision — When and How Much</h3>
+  <div class="box g">
+    <p><strong>A 1,000 sqm greenhouse on Prymepoint genuinely changes the economics.</strong> Greenhouse cucumber: 12–16 kg/sqm/cycle (the figure I incorrectly applied to open field). 1,000 sqm × 14 kg/sqm × 6 cycles × ₦220/kg = <strong>₦18,480,000/year from 1,000 sqm</strong>. That is 6× what the same 1,000 sqm produces open field. Cost to build: ₦8–12M (galvanised frame + UV polythene + drip irrigation). Payback: 6–8 months. The greenhouse is the single highest-ROI infrastructure investment available to Agrofini.</p>
+  </div>
+
+  <h3>4.4 Closing — The Honest Summary</h3>
+  <div class="sg sg4">
+    <div class="sc re"><div class="v">₦58.7M</div><div class="l">Previous Year 1 claim — incorrect. Greenhouse yield used for open field.</div></div>
+    <div class="sc"><div class="v">₦7–13M</div><div class="l">Correct Year 1 net profit, 15,000 sqm open field, good management.</div></div>
+    <div class="sc am"><div class="v">240–450%</div><div class="l">Year 1 ROI on ₦2.9M startup — still exceptional by any standard.</div></div>
+    <div class="sc dk"><div class="v">Year 4</div><div class="l">Realistic ₦50M net profit milestone — with Ota expansion + greenhouse.</div></div>
+  </div>
+
+  <div class="box dk">
+    <p style="color:rgba(255,255,255,0.9);font-size:10pt;"><strong>The Agrofini thesis does not break with honest numbers.</strong> ₦7–13M net profit on ₦2.9M investment in Year 1 is still a 240–450% return. Year 2 doubles to ₦14–20M. Year 3 grows to ₦22–45M. Year 4 reaches ₦50M+ with the greenhouse and Ota expansion — both funded from operating profit, not investor capital. The farm works. The numbers are real. The path to ₦50M is clear — it takes 4 years of disciplined execution, not 9 months of wishful projection.</p>
+  </div>
+
+  <div style="margin-top:5mm;border-top:1px solid var(--bo);padding-top:4mm;">
+    <p style="font-size:7.5pt;color:var(--mu);line-height:1.6;">
+      <strong>Disclaimer:</strong> Yield benchmarks sourced from IITA Nigeria, FAO West Africa vegetable production studies, NIHORT Ibadan field trial data, and Ogun State ADP extension publications. Prices based on NBS commodity price surveys 2024–2025 and Mile 12 wholesale market data. All projections are estimates — actual results depend on management quality, weather, soil conditions, pest pressure, and market dynamics. This document is for internal farm management use. Agrofini West Africa Limited (RC No. 8181060) is pre-operational. This does not constitute financial advice.
+    </p>
+  </div>
+
+  <div class="fb"><span>Agrofini West Africa Limited · RC No. 8181060 · Farm SOP 2026 · Confidential</span><span>Page 9 of 9</span></div>
+</div>
+
+</body>
+</html>
