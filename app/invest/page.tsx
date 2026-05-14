@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion'
 import Disclaimer from '../components/Disclaimer'
+import SupplyMap from '../components/SupplyMap'
+import InvestFAQ from '../components/InvestFAQ'
 
 const reasons = [
   {
@@ -239,6 +241,8 @@ export default function InvestPage() {
         </div>
       </section>
 
+      <SupplyMap />
+
       {/* Why Invest */}
       <section className="py-24 bg-sage">
         <div className="max-w-7xl mx-auto px-6">
@@ -363,6 +367,8 @@ export default function InvestPage() {
           </div>
         </div>
       </section>
+
+      <InvestFAQ />
 
       {/* CTA */}
       <section className="py-28 bg-accent text-center">
