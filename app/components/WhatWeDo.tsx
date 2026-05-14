@@ -7,7 +7,7 @@ const crops = [
     icon: 'fa-solid fa-pepper-hot',
     title: 'Habanero Pepper',
     acres: '12 Acres',
-    desc: 'Our primary income engine. Staggered across three blocks to hit the April–July Lagos peak price window when bags reach ₦60,000–₦120,000. Most Lagos pepper travels 700–1,000km from the North — ours arrives fresher from just 300km.',
+    desc: 'Our primary income engine. Staggered across three blocks to hit the April–July Lagos peak price window when bags command premium prices. Most Lagos pepper travels 700–1,000km from the North — ours arrives fresher from just 300km.',
   },
   {
     icon: 'fa-solid fa-circle',
@@ -49,7 +49,7 @@ export default function WhatWeDo() {
           <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-4">Our Operations</p>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-text mb-4">Five Crops. One Integrated Farm.</h2>
           <p className="text-text/60 max-w-2xl mx-auto">
-            Each enterprise selected by per-acre net profit — staggered to generate income every month of the year.
+            Our near-term operational plan at the Benin City expansion site — five enterprises staggered to generate income every month of the year.
           </p>
         </motion.div>
 

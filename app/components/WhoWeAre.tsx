@@ -17,8 +17,8 @@ export default function WhoWeAre() {
           <div className="rounded-2xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-primary/20 via-sage to-primary/10 flex items-center justify-center">
             <div className="text-center p-12">
               <i className="fa-solid fa-leaf text-primary/40 text-7xl mb-4 block" aria-hidden="true" />
-              <p className="text-primary/60 font-medium">20-Acre Commercial Farm</p>
-              <p className="text-primary/40 text-sm mt-1">Benin City, Edo State, Nigeria</p>
+              <p className="text-primary/60 font-medium">5 Acres Secured — Launchpad</p>
+              <p className="text-primary/40 text-sm mt-1">Primepoint Farm Estate, Ogun State</p>
             </div>
           </div>
           {/* Decorative element */}
@@ -37,14 +37,14 @@ export default function WhoWeAre() {
             The Agribusiness<br />Nigeria Has Been<br />Waiting For.
           </h2>
           <p className="text-text/70 text-lg leading-relaxed">
-            Nigeria has the land, the climate, and the demand. What it has lacked is structured, commercially disciplined farming built around real market data. Agrofini West Africa Limited was founded to close that gap — a 20-acre integrated horticulture operation in Benin City, Edo State, supplying Lagos&apos;s highest-volume wholesale markets directly.
+            Nigeria has the land, the climate, and the demand. What it has lacked is structured, commercially disciplined farming built around real market data. Agrofini West Africa Limited was founded to close that gap — starting with secured land at Primepoint Farm Estate in Ogun State, and expanding to an integrated horticulture hub near Benin City, Edo State, to supply Lagos&apos;s highest-volume wholesale markets directly.
           </p>
           <p className="text-text/70 text-lg leading-relaxed mt-4">
-            Incorporated under Nigerian law (RC No. 8181060), we operate five complementary enterprises — habanero pepper, snail farming, cucumber, tomato, and okra — engineered to generate income every single month of the year. Benin-grown produce reaches Mile 12 in 4–6 hours, fresher and cheaper than supply chains travelling 700–1,000km from the North.
+            Incorporated under Nigerian law (RC No. 8181060), we are establishing five complementary enterprises — habanero pepper, snail farming, cucumber, tomato, and okra — engineered to generate income across every month of the year. Produce from the Benin City site reaches Mile 12 in 4–6 hours, fresher and cheaper than supply chains travelling 700–1,000km from the North.
           </p>
           <div className="mt-8 pt-8 border-t border-sage">
             <p className="text-primary font-serif text-lg font-semibold italic">
-              &ldquo;We are not just building a farm. We are building the infrastructure for Nigeria&apos;s food sovereignty.&rdquo;
+              &ldquo;We are not building one farm. We are building the supply chain Nigeria&apos;s food security depends on — starting in Ogun, scaling through Edo.&rdquo;
             </p>
           </div>
         </motion.div>

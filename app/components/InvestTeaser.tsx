@@ -4,9 +4,9 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 const teaserStats = [
-  { value: '₦212M', label: 'Projected annual net profit — 20-acre integrated farm (moderate scenario)' },
-  { value: '545%', label: 'Projected Year 1 ROI on ₦38.9M total investment' },
-  { value: 'Day 35', label: 'First projected cash flow from farm operations' },
+  { value: '5 Acres', label: 'Land already secured — Primepoint Farm Estate, Ogun State' },
+  { value: '300km', label: 'Benin City to Mile 12 — structural proximity advantage over northern competitors' },
+  { value: 'Day 35', label: 'First projected harvest from fast-cycle crop operations' },
 ]
 
 export default function InvestTeaser() {
@@ -26,7 +26,7 @@ export default function InvestTeaser() {
               Nigeria&apos;s Food Import Crisis<br />Is the Investor Opportunity<br />of a Generation.
             </h2>
             <p className="text-white/70 text-lg leading-relaxed mb-4">
-              Every year, Nigeria spends billions importing food that its own soil can produce. Agrofini is positioned at the centre of that gap — with secured land, a tested location, and a clear roadmap to commercial scale.
+              Every year, Nigeria spends billions importing food that its own soil can produce. Agrofini is positioned at the centre of that gap — with 5 acres already secured at Primepoint Farm Estate, Ogun State, and a clear roadmap to 25-acre horticulture operations near Benin City.
             </p>
             <p className="text-white/60 text-base leading-relaxed mb-8">
               We are opening our first round of investment to partners who want to be part of building Nigeria&apos;s next great agribusiness — not just profit from it.
@@ -64,7 +64,7 @@ export default function InvestTeaser() {
 
             <div className="mt-2 px-2">
               <p className="text-white/30 text-xs leading-relaxed">
-                Financial projections are derived from a detailed farm operations plan using 2025 live Nigerian market data (BusinessDay, NBS, CBN). Figures are forward-looking estimates. Actual results may vary. This does not constitute a regulated investment solicitation.
+                This section does not constitute a regulated investment solicitation. Agrofini West Africa Limited is not currently registered with the Securities and Exchange Commission (SEC) of Nigeria.
               </p>
             </div>
           </motion.div>

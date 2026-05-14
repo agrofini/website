@@ -24,40 +24,30 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Contact & Social */}
+          {/* Contact */}
           <div>
             <p className="font-semibold mb-4 text-white/80 uppercase tracking-wider text-xs">Get in Touch</p>
-            <a href="mailto:info@agrofiniholdings.com" className="text-white/60 hover:text-white transition-colors flex items-center gap-2 mb-5">
+            <a href="mailto:info@agrofiniholdings.com" className="text-white/60 hover:text-white transition-colors flex items-center gap-2 mb-4">
               <i className="fa-solid fa-envelope text-sm" aria-hidden="true" />
               info@agrofiniholdings.com
             </a>
-            <div className="flex gap-4">
-              <a href="#" aria-label="Agrofini on LinkedIn" className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
-                <i className="fa-brands fa-linkedin-in text-white text-sm" aria-hidden="true" />
-              </a>
-              <a href="#" aria-label="Agrofini on Twitter/X" className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
-                <i className="fa-brands fa-x-twitter text-white text-sm" aria-hidden="true" />
-              </a>
-              <a href="#" aria-label="Agrofini on Instagram" className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
-                <i className="fa-brands fa-instagram text-white text-sm" aria-hidden="true" />
-              </a>
-            </div>
+            <p className="text-white/40 text-xs leading-relaxed">
+              Ogun State, Nigeria<br />
+              agrofiniholdings.com
+            </p>
           </div>
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between gap-4 text-xs text-white/40">
-          <p>© 2025 Agrofini West Africa Limited. All rights reserved.</p>
-          <p>The projects described represent Agrofini&apos;s strategic vision and pre-launch roadmap. Nothing herein constitutes a financial guarantee or public solicitation.</p>
+          <p>© 2026 Agrofini West Africa Limited. All rights reserved.</p>
+          <p>This website does not constitute a financial guarantee or public solicitation. RC No. 8181060.</p>
         </div>
         <p className="text-white/20 text-xs mt-4">
           Icons by{' '}
           <a href="https://fontawesome.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-white/40 transition-colors">
             Font Awesome
           </a>{' '}
-          (CC BY 4.0). Map data ©{' '}
-          <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer" className="underline hover:text-white/40 transition-colors">
-            OpenStreetMap contributors
-          </a>.
+          (CC BY 4.0).
         </p>
       </div>
     </footer>

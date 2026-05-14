@@ -22,7 +22,7 @@ const reasons = [
   {
     icon: 'fa-solid fa-rotate',
     title: 'Integrated Operations',
-    desc: 'Snail farm waste fertilises crop zones. Pepper and cucumber off-cuts feed the snails. Shared drip irrigation reduces per-acre cost by ~15% versus standalone operations. Every enterprise makes the others cheaper.',
+    desc: 'Snail farm waste fertilises crop zones. Pepper and cucumber off-cuts feed the snails. Shared drip infrastructure across all 20 acres meaningfully reduces per-acre cost versus standalone operations. Every enterprise makes the others cheaper.',
   },
   {
     icon: 'fa-solid fa-chart-line',
@@ -32,7 +32,7 @@ const reasons = [
   {
     icon: 'fa-solid fa-clock',
     title: 'Fast First Cash Flow',
-    desc: 'Okra and cucumber generate first revenue on Day 35 and Day 40 respectively — well before the 4–5 month window to first pepper harvest. Capital does not sit idle. The farm is earning from the first month.',
+    desc: 'Okra and cucumber target first harvest on Day 35 and Day 40 respectively — well before the 4–5 month window to first pepper harvest. Capital is designed not to sit idle. Our crop sequencing targets revenue from the first month of operations.',
   },
 ]
 
@@ -131,7 +131,7 @@ export default function InvestPage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            RC No. 8181060 · 20-Acre Commercial Farm · Benin City, Edo State, Nigeria
+            RC No. 8181060 · Ogun State Launchpad · Benin City Expansion · Nigeria
           </motion.p>
         </div>
       </section>
@@ -147,13 +147,13 @@ export default function InvestPage() {
           >
             <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-4">The Opportunity</p>
             <h2 className="font-serif text-3xl font-bold text-text mb-5 leading-snug">
-              20 Acres. Five Crops. One Direct Line to Lagos.
+              Two Sites. Five Crops. One Direct Line to Lagos.
             </h2>
             <p className="text-text/70 leading-relaxed mb-4">
-              Agrofini operates a 20-acre commercial farm in Benin City, Edo State — growing habanero pepper, snails, cucumber, tomato, and okra for direct supply to Lagos wholesale markets. Benin City sits 300km from Mile 12, West Africa&apos;s largest open food market. That proximity is our competitive edge.
+              Agrofini is establishing an integrated horticulture operation near Benin City, Edo State — growing habanero pepper, snails, cucumber, tomato, and okra for direct supply to Lagos wholesale markets. Building on our secured launchpad at Primepoint Farm Estate in Ogun State, the Benin City site is positioned 300km from Mile 12, West Africa&apos;s largest open food market.
             </p>
             <p className="text-text/70 leading-relaxed">
-              Most Lagos pepper travels 700–1,000km from the North. Ours arrives 4–6 hours after harvest — fresher, cheaper, and with zero middlemen between farm and buyer. The supply advantage is structural and permanent.
+              Most Lagos pepper travels 700–1,000km from the North. Ours arrives 4–6 hours after harvest — fresher, cheaper, and with zero middlemen between farm and buyer. The supply advantage is structural and durable.
             </p>
           </motion.div>
 
@@ -163,17 +163,78 @@ export default function InvestPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-4">The Projections</p>
+            <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-4">The Market Thesis</p>
             <h2 className="font-serif text-3xl font-bold text-text mb-5 leading-snug">
-              ₦212M Year 1. ₦742M Over Three Years.
+              A Broken Food System in Agrofini&apos;s Favour.
             </h2>
             <p className="text-text/70 leading-relaxed mb-4">
-              Our farm operations plan — built on 2025 live Nigerian market data from BusinessDay, NBS, and CBN sources — projects ₦212M annual net profit from a ₦38.9M Year 1 investment, with revenue growing at 15.5% year-on-year as infrastructure costs are amortised.
+              Nigeria&apos;s food system is structurally fragmented — undercapitalised supply chains, chronic post-harvest losses, and import dependency on food the country&apos;s own farmland can produce. Agrofini&apos;s positioning — integrated multi-crop operations with a direct line to Lagos&apos;s highest-volume wholesale markets — is designed to capture the margin that fragmented supply chains leave behind.
             </p>
-            <p className="text-text/50 text-sm leading-relaxed">
-              These are forward-looking projections, not guarantees. Actual results depend on market conditions, operational execution, and management quality.
+            <p className="text-text/70 leading-relaxed">
+              Our detailed farm operations plan is built on 2025 live Nigerian market data. Prospective investors are invited to request the full plan directly.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Our Two Sites */}
+      <section className="py-20 bg-primaryDark text-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-accent font-semibold uppercase tracking-widest text-sm mb-4">Where We Operate</p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold">Two Sites. One Strategy.</h2>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <motion.div
+              className="bg-white/5 border border-white/10 rounded-2xl p-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mb-5">
+                <i className="fa-solid fa-seedling text-accent text-lg" aria-hidden="true" />
+              </div>
+              <p className="text-accent font-semibold text-xs uppercase tracking-widest mb-2">The Launchpad</p>
+              <h3 className="font-serif text-2xl font-bold text-white mb-3">Primepoint Farm Estate</h3>
+              <p className="text-white/50 text-sm mb-4">Ogun State, Nigeria — 5 Acres Secured</p>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Our foundation. Land already secured, documented, and legally established. Ogun State sits on the doorstep of Lagos — Africa&apos;s largest commercial city — giving Agrofini immediate proximity to its primary consumer market from day one of operations.
+              </p>
+            </motion.div>
+            <motion.div
+              className="bg-white/5 border border-white/10 rounded-2xl p-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <div className="w-12 h-12 bg-primary/40 rounded-xl flex items-center justify-center mb-5">
+                <i className="fa-solid fa-arrow-trend-up text-white text-lg" aria-hidden="true" />
+              </div>
+              <p className="text-white/50 font-semibold text-xs uppercase tracking-widest mb-2">The Expansion</p>
+              <h3 className="font-serif text-2xl font-bold text-white mb-3">Benin City, Edo State</h3>
+              <p className="text-white/50 text-sm mb-4">Near-Term Target — 25 Acres</p>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Our commercial-scale horticulture hub. Five integrated crops — habanero pepper, snail farming, cucumber, tomato, and okra — positioned 300km from Mile 12, Lagos. Where the northern supply chain takes 700–1,000km, ours takes 300km. That is a structural edge no competitor can eliminate.
+              </p>
+            </motion.div>
+          </div>
+          <motion.p
+            className="text-center text-white/30 text-xs mt-8"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            Long-term vision: 600 acres of integrated commercial farmland.
+          </motion.p>
         </div>
       </section>
 
@@ -268,7 +329,7 @@ export default function InvestPage() {
             <p className="text-accent font-semibold uppercase tracking-widest text-sm mb-4">Roadmap</p>
             <h2 className="font-serif text-4xl md:text-5xl font-bold">How We Build</h2>
             <p className="text-white/50 mt-4 max-w-xl mx-auto">
-              A 24-month roadmap from secured launchpad to commercial-scale agribusiness.
+              Beginning at our 5-acre secured position at Primepoint Farm Estate, Ogun State — a 24-month roadmap to full commercial-scale, multi-crop operations.
             </p>
           </motion.div>
 
@@ -311,7 +372,7 @@ export default function InvestPage() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-text/60 font-semibold uppercase tracking-widest text-sm mb-5">First Round — Now Open</p>
+          <p className="text-text/60 font-semibold uppercase tracking-widest text-sm mb-5">Investor Conversations Open</p>
           <h2 className="font-serif text-3xl md:text-5xl font-bold text-text mb-5 leading-tight">
             The Ground Floor Doesn&apos;t<br />Stay Empty Long.
           </h2>
@@ -342,22 +403,18 @@ export default function InvestPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="bg-sage border-l-4 border-primary rounded-r-xl p-6 space-y-3">
             <p className="text-text/70 text-sm leading-relaxed">
-              <strong className="text-text">Important Notice:</strong> This page presents a forward-looking business vision. Agrofini West Africa Limited (RC No. 8181060) is currently in its pre-operational phase. All projections, timelines, and market figures are indicative and subject to change based on operational, regulatory, and market conditions.
+              <strong className="text-text">Important Notice:</strong> Agrofini West Africa Limited (RC No. 8181060) is a pre-operational company. The content on this page presents a forward-looking business vision. Timelines, plans, and market figures are indicative and subject to change based on operational, regulatory, and market conditions.
             </p>
             <p className="text-text/70 text-sm leading-relaxed">
-              This does not constitute a public offer, a regulated financial product, or a solicitation to invest under any securities law. Agrofini West Africa Limited is not currently registered with the Securities and Exchange Commission (SEC) of Nigeria. Any future capital raise will be conducted in full compliance with applicable Nigerian law, including through licensed and regulated intermediaries where required by law.
+              This page does not constitute a public offer, a regulated financial product, or a solicitation to invest under any securities law. Agrofini West Africa Limited is not currently registered with the Securities and Exchange Commission (SEC) of Nigeria. Any future capital raise will be conducted in full compliance with applicable Nigerian law, including through licensed and regulated intermediaries where required.
             </p>
             <p className="text-text/70 text-sm leading-relaxed">
-              Market data and statistics referenced on this page are drawn from publicly available trade data, FAO reports, and third-party research. They are provided for context only and do not constitute a guarantee of business performance or investment returns. All investments carry risk, including the risk of loss of capital.
-            </p>
-            <p className="text-text/70 text-sm leading-relaxed">
-              Prospective investors are strongly advised to conduct their own independent due diligence and seek professional financial, legal, and tax advice before making any investment decision.
+              Market data referenced on this page is drawn from publicly available sources and is provided for context only. All investments carry risk, including the risk of loss of capital. Prospective investors are strongly advised to conduct independent due diligence and seek professional financial, legal, and tax advice before making any investment decision.
             </p>
           </div>
         </div>
       </section>
 
-      <Disclaimer />
     </>
   )
 }

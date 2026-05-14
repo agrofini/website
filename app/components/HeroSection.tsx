@@ -46,7 +46,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
         >
-          Nigeria imports billions of dollars in food every year. We are building the integrated commercial farms — right here in Ogun State — to change that.
+          Nigeria imports billions of dollars in food every year. With 5 acres already secured at Primepoint Farm Estate, Ogun State, we are building the integrated commercial farms to change that.
         </motion.p>
 
         <motion.p
@@ -55,7 +55,7 @@ export default function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.35 }}
         >
-          Greenhouse farming · Aquaculture · Poultry · Agro-Tech
+          Horticulture · Snail Farming · Integrated Agribusiness
         </motion.p>
 
         <motion.div

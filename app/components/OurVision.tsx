@@ -40,13 +40,13 @@ export default function OurVision() {
             },
             {
               icon: 'fa-solid fa-location-dot',
-              label: 'Strategic Location',
-              value: 'Ogun State — gateway to Lagos, Africa\'s largest commercial city',
+              label: 'Strategic Locations',
+              value: 'Ogun State launchpad · Benin City expansion · Direct Lagos supply chain',
             },
             {
               icon: 'fa-solid fa-arrow-trend-up',
               label: 'Growth Model',
-              value: '2 hectares today → 50 acres near-term → 600 acres long-term vision',
+              value: '5 acres secured (Ogun State) → 25-acre Benin City horticulture hub → 600 acres integrated vision',
             },
           ].map((item) => (
             <div key={item.label} className="flex gap-4">
