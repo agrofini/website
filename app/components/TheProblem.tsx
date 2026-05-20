@@ -65,7 +65,7 @@ export default function TheProblem() {
           transition={{ duration: 0.7, delay: 0.3 }}
         >
           <p className="text-white/80 text-lg leading-relaxed font-serif italic">
-            &ldquo;This is not a farming problem. It is an infrastructure, logistics, and capital problem. That is exactly the problem Agrofini was built to solve.&rdquo;
+            &ldquo;This is not a farming problem. It is an infrastructure and logistics problem. We built the supply chain to fix it — so every buyer who partners with us never has to depend on a broken system again.&rdquo;
           </p>
         </motion.div>
       </div>

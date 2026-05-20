@@ -66,7 +66,7 @@ export default function WhoWeAre() {
           </p>
           <div className="mt-8 pt-8 border-t border-sage">
             <p className="text-primary font-serif text-lg font-semibold italic">
-              &ldquo;We are not building one farm. We are building the supply chain Nigeria&apos;s food security depends on — demand-anchored, vertically integrated, and built to scale.&rdquo;
+              &ldquo;We know who is buying before we plant. That is how we guarantee your supply arrives fresh, on schedule, every time.&rdquo;
             </p>
           </div>
         </motion.div>

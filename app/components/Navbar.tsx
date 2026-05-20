@@ -4,6 +4,15 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/produce', label: 'Our Produce' },
+  { href: '/buyers', label: 'For Buyers' },
+  { href: '/journal', label: 'Journal' },
+  { href: '/contact', label: 'Contact' },
+]
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -16,8 +25,8 @@ export default function Navbar() {
   }, [])
 
   const linkClass = (href: string) =>
-    `font-medium transition-colors ${
-      pathname === href ? 'text-primary font-semibold' : 'text-text hover:text-primary'
+    `font-medium transition-colors text-sm ${
+      pathname === href ? 'text-primary font-semibold' : 'text-text/80 hover:text-primary'
     }`
 
   return (
@@ -27,29 +36,32 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="font-serif text-2xl font-bold text-primary">
+        <Link href="/" className="font-serif text-2xl font-bold text-primary flex-shrink-0">
           Agrofini
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-8">
-          <Link href="/" className={linkClass('/')}>Home</Link>
-          <Link href="/invest" className={linkClass('/invest')}>Invest</Link>
-          <Link href="/contact" className={linkClass('/contact')}>Contact</Link>
+        <div className="hidden lg:flex items-center gap-6">
+          {navLinks.map((link) => (
+            <Link key={link.href} href={link.href} className={linkClass(link.href)}>
+              {link.label}
+            </Link>
+          ))}
           <Link
-            href="/invest"
-            aria-label="Invest now with Agrofini"
-            className="bg-primary text-white px-5 py-2 rounded-full font-semibold hover:bg-primaryDark transition-colors"
+            href="/buyers"
+            aria-label="Become a supply partner with Agrofini"
+            className="bg-primary text-white px-5 py-2 rounded-full font-semibold text-sm hover:bg-primaryDark transition-colors"
           >
-            Invest Now
+            Become a Partner
           </Link>
         </div>
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
+          className="lg:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
         >
           <span className={`block w-6 h-0.5 bg-text transition-all ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
           <span className={`block w-6 h-0.5 bg-text transition-all ${menuOpen ? 'opacity-0' : ''}`} />
@@ -59,17 +71,24 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white border-t border-sage px-6 py-4 flex flex-col gap-4">
-          <Link href="/" onClick={() => setMenuOpen(false)} className={linkClass('/')}>Home</Link>
-          <Link href="/invest" onClick={() => setMenuOpen(false)} className={linkClass('/invest')}>Invest</Link>
-          <Link href="/contact" onClick={() => setMenuOpen(false)} className={linkClass('/contact')}>Contact</Link>
+        <div className="lg:hidden bg-white border-t border-sage px-6 py-4 flex flex-col gap-4">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+              className={linkClass(link.href)}
+            >
+              {link.label}
+            </Link>
+          ))}
           <Link
-            href="/invest"
+            href="/buyers"
             onClick={() => setMenuOpen(false)}
-            aria-label="Invest now with Agrofini"
-            className="bg-primary text-white px-5 py-2 rounded-full font-semibold text-center hover:bg-primaryDark transition-colors"
+            aria-label="Become a supply partner with Agrofini"
+            className="bg-primary text-white px-5 py-2 rounded-full font-semibold text-sm text-center hover:bg-primaryDark transition-colors"
           >
-            Invest Now
+            Become a Partner
           </Link>
         </div>
       )}

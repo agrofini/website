@@ -17,7 +17,21 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(node -e \"const {chromium} = require\\('@playwright/test'\\); console.log\\('playwright ok'\\);\")",
-      "Bash(node generate-pdf.js)"
+      "Bash(node generate-pdf.js)",
+      "WebFetch(domain:www.sienafarmsma.com)",
+      "WebFetch(domain:www.piercecountyfarm.com)",
+      "WebFetch(domain:www.farmerswebsolution.com)",
+      "WebFetch(domain:www.hundredfold.farm)",
+      "WebFetch(domain:sienafarmsma.com)",
+      "WebFetch(domain:www.chefsgardenohio.com)",
+      "WebFetch(domain:www.brokengroundfarm.com)",
+      "WebFetch(domain:www.thechefsgarden.com)",
+      "WebFetch(domain:www.misfitsmarket.com)",
+      "WebFetch(domain:www.imperfectfoods.com)",
+      "WebFetch(domain:thechefsgarden.com)",
+      "WebFetch(domain:www.farmtopeople.com)",
+      "WebFetch(domain:www.fullharvestfarms.com)",
+      "WebFetch(domain:fullharvest.com)"
     ],
     "additionalDirectories": [
       "/Users/mo/Desktop/agrofini-website"

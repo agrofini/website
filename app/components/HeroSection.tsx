@@ -37,7 +37,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          Rooted in Purpose.<br />Growing for Africa.
+          Grown to Order.<br />Delivered Direct.
         </motion.h1>
 
         <motion.p
@@ -46,7 +46,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
         >
-          Nigeria imports billions of dollars in food every year. With 5 acres already secured at Primepoint Farm Estate, Ogun State, we are building the integrated commercial farms to change that.
+          Commercial farms in Southwest Nigeria supplying Lagos&apos;s hotels, restaurants, wholesale markets, and households — fresh produce direct from the farm, zero middlemen.
         </motion.p>
 
         <motion.p
@@ -55,7 +55,7 @@ export default function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.35 }}
         >
-          Horticulture · Snail Farming · Integrated Agribusiness
+          Habanero · Snails · Cucumber · Tomato · Okra
         </motion.p>
 
         <motion.div
@@ -64,19 +64,19 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
         >
-          <a
-            href="#who-we-are"
-            aria-label="Learn our story"
+          <Link
+            href="/produce"
+            aria-label="View what Agrofini grows"
             className="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-warmWhite transition-colors text-lg"
           >
-            Our Story
-          </a>
+            Our Produce
+          </Link>
           <Link
-            href="/invest"
-            aria-label="Invest with Agrofini"
+            href="/buyers"
+            aria-label="Become a supply partner with Agrofini"
             className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition-colors text-lg"
           >
-            Investment Opportunity
+            Become a Partner
           </Link>
         </motion.div>
       </div>
