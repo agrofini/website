@@ -7,62 +7,47 @@ const crops = [
   {
     icon: 'fa-solid fa-pepper-hot',
     name: 'Habanero Pepper',
-    acres: '12 Acres',
     color: 'bg-red-50 border-red-200',
     iconColor: 'text-red-500',
-    cycles: '2 cycles/year',
-    firstRevenue: 'Month 4–5',
     peakSeason: 'April – July',
-    supplyTo: 'Wholesale markets, food processors, restaurants, households',
-    detail: 'Our primary cash crop and largest income engine. Staggered across three planting blocks to capture the April–July Lagos peak-price window, when most Lagos pepper arrives after a 700–1,000km journey from the North. Ours travels 300km and arrives the same day.',
+    supplyTo: 'Wholesale markets · Food processors · Restaurants · Households',
+    desc: 'Premium hot pepper grown for the Lagos wholesale and hospitality market. Our Southwest Nigeria location means produce reaches Mile 12 and restaurant kitchens the same day it is harvested — fresher than supply arriving from longer distances.',
   },
   {
     icon: 'fa-solid fa-circle',
     name: 'Snail Farm',
-    acres: '1 Acre',
     color: 'bg-amber-50 border-amber-200',
     iconColor: 'text-amber-600',
-    cycles: 'Continuous',
-    firstRevenue: 'Month 8–10',
     peakSeason: 'Year-round',
-    supplyTo: 'Lagos hotels, restaurants, export channels',
-    detail: 'Giant West African Snail (Archachatina marginata) — the highest net-profit-per-acre enterprise on the farm. Nigeria\'s annual snail demand of 7.5 million kg is chronically undersupplied. Once established, the snail operation provides steady, year-round supply with significant export upside from Year 2.',
+    supplyTo: 'Hotels · Restaurants · Export channels',
+    desc: 'Giant West African Snail (Archachatina marginata) — a premium protein source in high demand across Lagos\'s hospitality sector and in export markets. Year-round availability makes it a reliable anchor for hotel and restaurant supply agreements.',
   },
   {
     icon: 'fa-solid fa-leaf',
     name: 'Cucumber',
-    acres: '4 Acres',
     color: 'bg-green-50 border-green-200',
     iconColor: 'text-green-600',
-    cycles: '3 cycles/year',
-    firstRevenue: 'Day 40',
-    peakSeason: 'Jan–Feb · Jul–Aug · Nov–Dec',
-    supplyTo: 'Wholesale markets, hotels, restaurants, households',
-    detail: 'Three cycles per year, with first harvest on Day 40 — the fastest cash-flow crop on the farm. Mile 12 market trades enormous volumes of cucumber daily. Our proximity to Lagos means consistently fresher product and better market prices than supply arriving after long northern transit.',
+    peakSeason: 'Multiple seasons',
+    supplyTo: 'Wholesale markets · Hotels · Restaurants · Households',
+    desc: 'Fresh cucumbers available across multiple harvest seasons per year. One of the highest-volume produce items in Lagos wholesale markets. Direct dispatch means it arrives crisp, with shelf life intact.',
   },
   {
     icon: 'fa-solid fa-seedling',
     name: 'Tomato',
-    acres: '2 Acres',
     color: 'bg-orange-50 border-orange-200',
     iconColor: 'text-orange-500',
-    cycles: '2 cycles/year',
-    firstRevenue: 'Month 3',
-    peakSeason: 'Dec–Mar · Oct–Nov',
-    supplyTo: 'Wholesale markets, restaurants, food processors',
-    detail: 'Nigeria imports over $360M in tomato paste annually despite being one of Africa\'s largest fresh tomato producers. Our dry-season cycles (December–March) capture peak prices when northern supply is most constrained. Premium positioning for direct-to-restaurant and processor supply.',
+    peakSeason: 'Dry season (Oct – Mar)',
+    supplyTo: 'Wholesale markets · Restaurants · Food processors',
+    desc: 'Fresh tomatoes with peak availability in the dry season, when demand from Lagos restaurants and processors is highest. Grown for direct supply to professional kitchens and market traders who require consistent quality and reliable delivery.',
   },
   {
     icon: 'fa-solid fa-spa',
     name: 'Okra',
-    acres: '1 Acre',
     color: 'bg-lime-50 border-lime-200',
     iconColor: 'text-lime-600',
-    cycles: '4 cycles/year',
-    firstRevenue: 'Day 35',
     peakSeason: 'Year-round',
-    supplyTo: 'Wholesale markets, restaurants, households',
-    detail: 'The first revenue on the farm — okra reaches first harvest in just 35 days, covering early labour costs before other crops are established. Four cycles per year deliver consistent monthly income and year-round availability for supply partners who rely on okra as a staple ingredient.',
+    supplyTo: 'Wholesale markets · Restaurants · Households',
+    desc: 'A West African staple in continuous demand across Lagos households, restaurant kitchens, and market traders. Year-round availability makes okra a dependable inclusion in any supply agreement with Agrofini.',
   },
 ]
 
@@ -97,52 +82,44 @@ export default function ProducePage() {
             className="text-white/70 text-xl leading-relaxed max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}
           >
-            Our five-crop system is engineered so that something is always in harvest — giving supply partners consistent availability across every month of the year.
+            Five complementary crops staggered across seasons — so supply partners always have something in harvest, regardless of the time of year.
           </motion.p>
         </div>
       </section>
 
       {/* Crop cards */}
       <section className="py-24 bg-warmWhite">
-        <div className="max-w-6xl mx-auto px-6 space-y-10">
+        <div className="max-w-5xl mx-auto px-6 space-y-6">
           {crops.map((crop, i) => (
             <motion.div
               key={crop.name}
-              className={`grid grid-cols-1 lg:grid-cols-3 gap-8 border rounded-2xl p-8 ${crop.color}`}
-              initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.05 }}
+              className={`grid grid-cols-1 md:grid-cols-3 gap-6 border rounded-2xl p-7 ${crop.color}`}
+              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.05 }}
             >
-              {/* Left */}
+              {/* Left: identity + meta */}
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-sm">
-                    <i className={`${crop.icon} ${crop.iconColor} text-2xl`} aria-hidden="true" />
+                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm flex-shrink-0">
+                    <i className={`${crop.icon} ${crop.iconColor} text-xl`} aria-hidden="true" />
                   </div>
-                  <div>
-                    <p className="text-primary font-bold text-xs uppercase tracking-widest">{crop.acres}</p>
-                    <h2 className="font-serif text-2xl font-bold text-text">{crop.name}</h2>
-                  </div>
+                  <h2 className="font-serif text-xl font-bold text-text">{crop.name}</h2>
                 </div>
-                <div className="grid grid-cols-2 gap-3">
-                  {[
-                    { label: 'Cycles', value: crop.cycles },
-                    { label: 'First revenue', value: crop.firstRevenue },
-                    { label: 'Peak season', value: crop.peakSeason },
-                  ].map((stat) => (
-                    <div key={stat.label} className="bg-white/60 rounded-xl p-3">
-                      <p className="text-text/40 text-xs uppercase tracking-wider mb-1">{stat.label}</p>
-                      <p className="text-text font-semibold text-sm">{stat.value}</p>
-                    </div>
-                  ))}
-                  <div className="bg-white/60 rounded-xl p-3 col-span-2">
-                    <p className="text-text/40 text-xs uppercase tracking-wider mb-1">Supply channels</p>
-                    <p className="text-text font-semibold text-xs leading-snug">{crop.supplyTo}</p>
+                <div className="space-y-2">
+                  <div className="bg-white/70 rounded-xl px-4 py-3">
+                    <p className="text-text/40 text-xs uppercase tracking-wider mb-1">Peak availability</p>
+                    <p className="text-text font-semibold text-sm">{crop.peakSeason}</p>
+                  </div>
+                  <div className="bg-white/70 rounded-xl px-4 py-3">
+                    <p className="text-text/40 text-xs uppercase tracking-wider mb-1">Supplied to</p>
+                    <p className="text-text font-medium text-xs leading-relaxed">{crop.supplyTo}</p>
                   </div>
                 </div>
               </div>
 
-              {/* Right */}
-              <div className="lg:col-span-2">
-                <p className="text-text/70 leading-relaxed">{crop.detail}</p>
+              {/* Right: description */}
+              <div className="md:col-span-2 flex items-center">
+                <p className="text-text/65 leading-relaxed">{crop.desc}</p>
               </div>
             </motion.div>
           ))}
@@ -156,16 +133,16 @@ export default function ProducePage() {
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
           >
-            <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-4">Availability Calendar</p>
+            <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-4">Availability</p>
             <h2 className="font-serif text-4xl font-bold text-text">When We Harvest</h2>
-            <p className="text-text/60 mt-3 max-w-xl mx-auto">Plan your supply agreements around our harvest windows. Five crops mean something is always available.</p>
+            <p className="text-text/60 mt-3 max-w-xl mx-auto">Plan your supply agreements around our harvest windows.</p>
           </motion.div>
 
           <motion.div
             className="bg-white rounded-2xl p-6 shadow-sm overflow-x-auto"
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
           >
-            <table className="w-full min-w-[600px]">
+            <table className="w-full min-w-[580px]">
               <thead>
                 <tr>
                   <th className="text-left text-text/50 text-xs font-semibold uppercase tracking-wider pb-4 pr-4 w-28">Crop</th>
@@ -174,20 +151,20 @@ export default function ProducePage() {
                   ))}
                 </tr>
               </thead>
-              <tbody className="space-y-2">
-                {calendar.map((row, i) => (
+              <tbody>
+                {calendar.map((row) => (
                   <tr key={row.name}>
                     <td className="text-text font-semibold text-sm pr-4 py-2">{row.name}</td>
                     {months.map((_, mi) => (
                       <td key={mi} className="px-1 py-2">
-                        <div className={`h-6 rounded-md ${row.active.includes(mi) ? row.color : 'bg-gray-100'} mx-auto`} style={{ width: '100%' }} />
+                        <div className={`h-5 rounded ${row.active.includes(mi) ? row.color : 'bg-gray-100'}`} />
                       </td>
                     ))}
                   </tr>
                 ))}
               </tbody>
             </table>
-            <p className="text-text/30 text-xs mt-4">Projected harvest windows based on Benin City expansion site planting calendar. Subject to operational timelines.</p>
+            <p className="text-text/30 text-xs mt-4">Projected availability based on planned operations. Subject to operational timelines.</p>
           </motion.div>
         </div>
       </section>
@@ -197,23 +174,24 @@ export default function ProducePage() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
+            className="mb-12"
           >
             <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-4">How to Order</p>
-            <h2 className="font-serif text-4xl font-bold text-text mb-12">Start Your Supply Relationship</h2>
+            <h2 className="font-serif text-4xl font-bold text-text">Start Your Supply Relationship</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {[
-              { step: '01', icon: 'fa-solid fa-envelope', title: 'Reach Out', body: 'Email us at info@agrofiniholdings.com or use the contact form. Tell us which crops you need, your approximate volumes, and your delivery location.' },
-              { step: '02', icon: 'fa-solid fa-calendar-check', title: 'We Plan Together', body: 'We align your requirements with our planting calendar and confirm availability, pricing, and delivery schedule. No surprises.' },
-              { step: '03', icon: 'fa-solid fa-truck-fast', title: 'Fresh Delivery', body: 'Your produce is harvested and dispatched directly to you — same-day delivery to Lagos, fresh from the farm.' },
+              { step: '01', icon: 'fa-solid fa-envelope', title: 'Reach Out', body: 'Email us or use the contact form. Tell us which crops you need, your approximate volumes, and your delivery location.' },
+              { step: '02', icon: 'fa-solid fa-calendar-check', title: 'We Align Together', body: 'We confirm availability, pricing, and a delivery schedule that works for both sides. No surprises.' },
+              { step: '03', icon: 'fa-solid fa-truck-fast', title: 'Fresh Delivery', body: 'Produce is harvested and dispatched directly to you — same-day delivery to Lagos from the farm.' },
             ].map((s, i) => (
               <motion.div
                 key={s.step}
                 className="flex flex-col items-center text-center"
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.12 }}
               >
-                <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-4">
-                  <i className={`${s.icon} text-white text-2xl`} aria-hidden="true" />
+                <div className="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center mb-4">
+                  <i className={`${s.icon} text-white text-xl`} aria-hidden="true" />
                 </div>
                 <p className="text-accent font-bold text-xs uppercase tracking-widest mb-2">{s.step}</p>
                 <h3 className="font-serif text-lg font-bold text-text mb-2">{s.title}</h3>
@@ -223,7 +201,7 @@ export default function ProducePage() {
           </div>
           <Link
             href="/contact"
-            aria-label="Contact Agrofini to place a produce order"
+            aria-label="Contact Agrofini to start a supply relationship"
             className="inline-block bg-primary text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-primaryDark transition-colors"
           >
             Get in Touch
