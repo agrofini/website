@@ -7,7 +7,7 @@ const milestones = [
   { phase: 'Now', title: 'Foundation & Planning', body: 'Land secured at Primepoint Farm Estate, Ogun State. Supply partnerships being established. Farm Operations Plan finalised.' },
   { phase: 'Months 1–6', title: 'Build & Plant', body: 'Borehole and drip irrigation installed. First crops planted. Farm team hired and operational. Ogun site producing first supply volumes.' },
   { phase: 'Months 6–12', title: 'First Harvest', body: 'Okra Day 35, cucumber Day 40. Pepper peak April–July. Mile 12 dispatch running. Direct buyer supply contracts live.' },
-  { phase: 'Months 12–24', title: 'Benin City Expansion', body: '25-acre horticulture site operational. Cold chain infrastructure. Value-added processing. Hotel and restaurant contract supply.' },
+  { phase: 'Months 12–24', title: 'Benin City Expansion', body: 'Benin City horticulture site operational. Cold chain infrastructure. Value-added processing. Hotel and restaurant contract supply.' },
 ]
 
 const values = [
@@ -53,10 +53,10 @@ export default function AboutPage() {
             <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-4">The Foundation</p>
             <h2 className="font-serif text-4xl font-bold text-text mb-6 leading-tight">Two Sites. One Connected Strategy.</h2>
             <p className="text-text/70 leading-relaxed mb-4 text-lg">
-              We began with 5 acres of secured land at Primepoint Farm Estate in Ogun State — a launchpad chosen for its immediate proximity to Lagos, Africa&apos;s largest commercial city. From day one of operations, Agrofini is minutes from its primary consumer market.
+              We began with secured land at Primepoint Farm Estate in Ogun State — a launchpad chosen for its immediate proximity to Lagos, Africa&apos;s largest commercial city. From day one of operations, Agrofini is minutes from its primary consumer market.
             </p>
             <p className="text-text/70 leading-relaxed mb-4">
-              The next step is a 25-acre commercial horticulture site near Benin City, Edo State. Positioned 300km from Mile 12 — West Africa&apos;s largest open food market — the Benin City site is where our full five-crop model operates at commercial scale: habanero pepper, snail farming, cucumber, tomato, and okra.
+              The next step is a commercial horticulture site near Benin City, Edo State. Positioned 300km from Mile 12 — West Africa&apos;s largest open food market — the Benin City site is where our full crop model operates at commercial scale: habanero pepper, bell pepper, snail farming, cucumber, tomato, and okra.
             </p>
             <p className="text-text/70 leading-relaxed">
               Beyond these two sites lies a longer vision: the infrastructure layer that connects Nigerian farmland to the consumers and businesses that need it — reliably, freshly, and without the six middlemen currently standing in between.
@@ -68,9 +68,9 @@ export default function AboutPage() {
             initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.1 }}
           >
             {[
-              { label: 'Site 1 — The Launchpad', location: 'Primepoint Farm Estate, Ogun State', size: '5 Acres Secured', desc: 'Adjacent to Lagos — immediate proximity to our primary market from day one.' },
-              { label: 'Site 2 — The Expansion', location: 'Benin City, Edo State', size: '25 Acres — Near-Term', desc: 'Commercial-scale horticulture hub. 300km from Mile 12. Five integrated crops.' },
-              { label: 'The Long-Term Vision', location: 'Southwest Nigeria & Beyond', size: '600 Acres — Integrated', desc: 'A network of demand-matched farms and supply infrastructure serving West Africa.' },
+              { label: 'Site 1 — The Launchpad', location: 'Primepoint Farm Estate, Ogun State', size: 'Ogun State Site', desc: 'Adjacent to Lagos — immediate proximity to our primary market from day one.' },
+              { label: 'Site 2 — The Expansion', location: 'Benin City, Edo State', size: 'Benin City Hub', desc: 'Commercial-scale horticulture hub. 300km from Mile 12. Six integrated crops.' },
+              { label: 'The Long-Term Vision', location: 'Southwest Nigeria & Beyond', size: 'Network Vision', desc: 'A network of demand-matched farms and supply infrastructure serving West Africa.' },
             ].map((site, i) => (
               <motion.div
                 key={site.label}

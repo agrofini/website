@@ -13,7 +13,7 @@ const steps = [
     number: '02',
     icon: 'fa-solid fa-seedling',
     title: 'We Grow to Your Order',
-    body: 'Our five-crop farm is sequenced for year-round harvest. We plant specifically to fill your confirmed order — ensuring consistent quality, the right volumes, and no seasonal supply gaps.',
+    body: 'Our multi-crop farm is sequenced for year-round harvest. We plant specifically to fill your confirmed order — ensuring consistent quality, the right volumes, and no seasonal supply gaps.',
   },
   {
     number: '03',

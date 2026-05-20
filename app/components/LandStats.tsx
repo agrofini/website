@@ -3,10 +3,10 @@
 import { motion } from 'framer-motion'
 
 const stats = [
-  { value: '5 Acres', label: 'Secured Land — Primepoint Farm Estate, Ogun State' },
-  { value: '25 Acres', label: 'Near-Term Expansion Target — Benin City, Edo State' },
-  { value: '600 Acres', label: 'Long-Term Integrated Farmland Vision' },
-  { value: '5 Crops', label: 'Habanero Pepper · Snails · Cucumber · Tomato · Okra' },
+  { value: 'Ogun State', label: 'Launchpad site — Primepoint Farm Estate, adjacent to Lagos' },
+  { value: 'Benin City', label: 'Expansion site — 300km from Mile 12, commercial scale' },
+  { value: 'SW Nigeria', label: 'Long-term network vision — demand-matched farms across the region' },
+  { value: '6 Crops', label: 'Habanero · Bell Pepper · Snails · Cucumber · Tomato · Okra' },
 ]
 
 export default function LandStats() {

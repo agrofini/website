@@ -23,6 +23,15 @@ const crops = [
     desc: 'Giant West African Snail (Archachatina marginata) — a premium protein source in high demand across Lagos\'s hospitality sector and in export markets. Year-round availability makes it a reliable anchor for hotel and restaurant supply agreements.',
   },
   {
+    icon: 'fa-solid fa-pepper-hot',
+    name: 'Bell Pepper',
+    color: 'bg-yellow-50 border-yellow-200',
+    iconColor: 'text-yellow-500',
+    peakSeason: 'March – August',
+    supplyTo: 'Wholesale markets · Hotels · Restaurants · Food processors',
+    desc: 'Sweet bell peppers in red, green, and yellow varieties — consistently in demand across Lagos hospitality kitchens and retail markets. Grown alongside our habanero crop, they broaden our pepper supply offering with wide appeal across buyer segments.',
+  },
+  {
     icon: 'fa-solid fa-leaf',
     name: 'Cucumber',
     color: 'bg-green-50 border-green-200',
@@ -54,6 +63,7 @@ const crops = [
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 const calendar = [
   { name: 'Habanero', color: 'bg-red-400', active: [3, 4, 5, 6, 8, 9, 10] },
+  { name: 'Bell Pepper', color: 'bg-yellow-400', active: [2, 3, 4, 5, 6, 7] },
   { name: 'Snail', color: 'bg-amber-400', active: [0,1,2,3,4,5,6,7,8,9,10,11] },
   { name: 'Cucumber', color: 'bg-green-400', active: [0,1,6,7,10,11] },
   { name: 'Tomato', color: 'bg-orange-400', active: [0,1,2,9,10,11] },
@@ -76,13 +86,13 @@ export default function ProducePage() {
             className="font-serif text-4xl md:text-6xl font-bold leading-tight mb-6"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}
           >
-            Five Crops. Year-Round Supply.
+            Six Crops. Year-Round Supply.
           </motion.h1>
           <motion.p
             className="text-white/70 text-xl leading-relaxed max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}
           >
-            Five complementary crops staggered across seasons — so supply partners always have something in harvest, regardless of the time of year.
+            Six complementary crops staggered across seasons — so supply partners always have something in harvest, regardless of the time of year.
           </motion.p>
         </div>
       </section>

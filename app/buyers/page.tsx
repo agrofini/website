@@ -13,7 +13,7 @@ const buyerTypes = [
 
 const advantages = [
   { icon: 'fa-solid fa-clock', title: 'Same-Day Freshness', body: 'Our produce leaves the farm and reaches Lagos in 4–6 hours. No overnight transit. No cold-chain break. Longer shelf life and better taste than supply chains travelling 700–1,000km from the North.' },
-  { icon: 'fa-solid fa-rotate', title: 'Year-Round Availability', body: 'Five crops staggered for continuous harvest means we never have a gap in supply. Okra and cucumber deliver multiple cycles annually. Snails run year-round. Your supply chain does not go quiet.' },
+  { icon: 'fa-solid fa-rotate', title: 'Year-Round Availability', body: 'Six crops staggered for continuous harvest means we never have a gap in supply. Okra and cucumber deliver multiple cycles annually. Snails run year-round. Your supply chain does not go quiet.' },
   { icon: 'fa-solid fa-handshake', title: 'Grown to Your Order', body: 'We plan our planting calendar around confirmed buyer requirements. That means you get the volume you asked for, at the quality you expect, on the schedule we agreed.' },
   { icon: 'fa-solid fa-location-dot', title: 'Structural Proximity', body: 'Our Benin City site sits 300km from Mile 12 — compared to 700–1,000km for most Lagos produce. This is not a short-term advantage. It is a permanent structural one.' },
   { icon: 'fa-solid fa-ban', title: 'Zero Middlemen', body: 'No brokers. No overnight traders. No market re-sellers. One relationship — directly between your operation and our farm. That is where the margin lives.' },

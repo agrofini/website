@@ -24,7 +24,7 @@ export default function WhoWeAre() {
           <div className="rounded-2xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-primary/20 via-sage to-primary/10 flex items-center justify-center">
             <div className="text-center p-12">
               <i className="fa-solid fa-leaf text-primary/40 text-7xl mb-4 block" aria-hidden="true" />
-              <p className="text-primary/60 font-medium">5 Acres Secured — Launchpad</p>
+              <p className="text-primary/60 font-medium">Ogun State — Launchpad Site</p>
               <p className="text-primary/40 text-sm mt-1">Primepoint Farm Estate, Ogun State</p>
             </div>
           </div>
@@ -59,7 +59,7 @@ export default function WhoWeAre() {
             Most farms grow produce and hope for a buyer. Agrofini works in reverse: we establish supply relationships — with households, hotels, restaurants, and corporate off-takers — before a single seed is planted. Every harvest has a destination. Every delivery has a price. Capital is never sitting idle waiting for a market to appear.
           </p>
           <p className="text-text/70 text-lg leading-relaxed mb-4">
-            Incorporated under Nigerian law (RC No. 8181060), we are establishing five complementary enterprises at our Benin City expansion site — habanero pepper, snail farming, cucumber, tomato, and okra — engineered to deliver fresh produce to Lagos in 4–6 hours, cutting out every middleman between the farm gate and the consumer.
+            Incorporated under Nigerian law (RC No. 8181060), we are establishing six complementary enterprises at our Benin City expansion site — habanero pepper, bell pepper, snail farming, cucumber, tomato, and okra — engineered to deliver fresh produce to Lagos in 4–6 hours, cutting out every middleman between the farm gate and the consumer.
           </p>
           <p className="text-text/70 text-base leading-relaxed">
             We are starting in Ogun State and scaling through Edo State. But the vision is not one farm, or two. It is the integrated food supply infrastructure that West Africa&apos;s growing cities have been demanding for a generation.

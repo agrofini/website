@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const supplyStats = [
   { value: '4–6 Hrs', label: 'Farm to Lagos on every delivery — same day, every time' },
-  { value: '5 Crops', label: 'Year-round availability — no seasonal supply gaps' },
+  { value: '6 Crops', label: 'Year-round availability — no seasonal supply gaps' },
   { value: '300km', label: 'Proximity advantage — fresher than anything from the North' },
 ]
 
