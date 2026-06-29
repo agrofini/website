@@ -483,12 +483,11 @@ export default function CentreOfExcellencePage() {
             </div>
           </motion.div>
 
-          {/* Cards helper: renders a single founding partner card */}
-          {(() => {
-            const PartnerCard = ({ partner, i }: { partner: typeof foundingPartners[0], i: number }) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {foundingPartners.map((partner, i) => (
               <motion.div
                 key={partner.title}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow relative flex flex-col"
+                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow relative"
                 initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.07 }}
               >
                 {/* Founding Opportunity ribbon */}
@@ -496,7 +495,7 @@ export default function CentreOfExcellencePage() {
                   Founding Opportunity
                 </div>
 
-                <div className="p-7 flex flex-col flex-1">
+                <div className="p-7">
                   {/* Logo placeholder */}
                   <div className="bg-sage border-2 border-dashed border-primary/20 rounded-xl h-20 flex items-center justify-center mb-6">
                     <div className="text-center">
@@ -516,7 +515,7 @@ export default function CentreOfExcellencePage() {
                     <h3 className="font-serif text-lg font-bold text-text leading-tight">{partner.title}</h3>
                   </div>
 
-                  <p className="text-text/60 text-sm leading-relaxed mb-6 flex-1">{partner.desc}</p>
+                  <p className="text-text/60 text-sm leading-relaxed mb-6">{partner.desc}</p>
 
                   <a
                     href={`mailto:info@agrofiniholdings.com?subject=Founding%20Partner%20Enquiry%20%E2%80%94%20${encodeURIComponent(partner.title)}`}
@@ -527,30 +526,8 @@ export default function CentreOfExcellencePage() {
                   </a>
                 </div>
               </motion.div>
-            )
-
-            const mainCards = foundingPartners.slice(0, 9)
-            const tailCards = foundingPartners.slice(9)
-
-            return (
-              <>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {mainCards.map((partner, i) => (
-                    <PartnerCard key={partner.title} partner={partner} i={i} />
-                  ))}
-                </div>
-                {tailCards.length > 0 && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-                    {/* Empty cell to centre the remaining two cards in a 3-col grid */}
-                    <div className="hidden lg:block" aria-hidden="true" />
-                    {tailCards.map((partner, i) => (
-                      <PartnerCard key={partner.title} partner={partner} i={9 + i} />
-                    ))}
-                  </div>
-                )}
-              </>
-            )
-          })()}
+            ))}
+          </div>
 
           {/* Banner */}
           <motion.div
