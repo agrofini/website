@@ -260,12 +260,23 @@ export default function OurJourneyPage() {
                   <div className="flex-shrink-0 w-full md:w-52">
                     <div className="flex items-center gap-3">
                       {s.active ? (
-                        <div className="w-3 h-3 bg-accent rounded-full animate-pulse flex-shrink-0" />
+                        <div className="relative flex-shrink-0">
+                          <div className="w-3 h-3 bg-accent rounded-full animate-pulse" />
+                          <div className="absolute inset-0 w-3 h-3 bg-accent/40 rounded-full animate-ping" />
+                        </div>
                       ) : (
                         <div className="w-3 h-3 bg-text/15 rounded-full flex-shrink-0" />
                       )}
                       <div>
-                        <p className={`font-serif font-bold text-sm ${s.active ? 'text-text' : 'text-text/50'}`}>{s.stage}</p>
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <p className={`font-serif font-bold text-sm ${s.active ? 'text-text' : 'text-text/50'}`}>{s.stage}</p>
+                          {s.active && (
+                            <span className="bg-accent/25 text-text text-xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1.5 uppercase tracking-wider">
+                              <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse inline-block" />
+                              Now
+                            </span>
+                          )}
+                        </div>
                         <p className={`text-xs ${s.active ? 'text-accent font-semibold' : 'text-text/35'}`}>{s.sub}</p>
                       </div>
                     </div>
@@ -288,6 +299,11 @@ export default function OurJourneyPage() {
 
                   <div className="flex-shrink-0 md:w-72">
                     <p className={`text-xs leading-relaxed ${s.active ? 'text-text/70' : 'text-text/35'}`}>{s.partnerNote}</p>
+                    {s.active && (
+                      <p className="mt-2 text-primary font-semibold text-xs uppercase tracking-wider">
+                        ★ Founding partner discussions are open at this stage
+                      </p>
+                    )}
                   </div>
                 </div>
               </motion.div>
