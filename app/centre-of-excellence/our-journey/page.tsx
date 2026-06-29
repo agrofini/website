@@ -121,7 +121,7 @@ const partnerJourney = [
 const timeline = [
   { status: 'complete', title: 'Vision & Strategy', desc: 'The Centre of Excellence concept, founding partner programme, and international engagement strategy are fully defined.' },
   { status: 'complete', title: 'Brand & Market Presence', desc: "Agrofini's brand is live. The Centre is being presented to strategic partners across Europe, Asia, and North America." },
-  { status: 'complete', title: 'Land Identified', desc: 'Sites across Ogun State and Benin City, Edo State have been identified. Acquisition is in progress.' },
+  { status: 'complete', title: 'Land Identified', desc: 'Approximately 50+ acres identified across Ogun State and Benin City, Edo State, Nigeria (growing and expanding) — forming the foundation for future commercial greenhouse development and the Centre of Excellence. Acquisition is in progress.' },
   { status: 'active', title: 'International Partnership Development', desc: 'Founding partner discussions are underway across 11 technology categories. This is the highest-influence window for prospective partners.' },
   { status: 'upcoming', title: 'Master Planning', desc: 'Physical layout, greenhouse specifications, infrastructure, and system integration — developed in collaboration with founding partners.' },
   { status: 'upcoming', title: 'Phase One Greenhouse Development', desc: 'Construction begins. Founding-level specifications are now committed.' },
