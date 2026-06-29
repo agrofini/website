@@ -5,13 +5,13 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/centre-of-excellence', label: 'Centre of Excellence' },
-  { href: '/produce', label: 'Our Produce' },
-  { href: '/buyers', label: 'For Buyers' },
-  { href: '/journal', label: 'Journal' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/', label: 'Home', shortLabel: undefined },
+  { href: '/about', label: 'About', shortLabel: undefined },
+  { href: '/centre-of-excellence', label: 'Centre of Excellence', shortLabel: 'Excellence' },
+  { href: '/produce', label: 'Our Produce', shortLabel: undefined },
+  { href: '/buyers', label: 'For Buyers', shortLabel: undefined },
+  { href: '/journal', label: 'Journal', shortLabel: undefined },
+  { href: '/contact', label: 'Contact', shortLabel: undefined },
 ]
 
 export default function Navbar() {
@@ -42,10 +42,11 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-4 xl:gap-6">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href} className={linkClass(link.href)}>
-              {link.label}
+              <span className="hidden xl:inline">{link.label}</span>
+              <span className="xl:hidden">{link.shortLabel ?? link.label}</span>
             </Link>
           ))}
           <Link
