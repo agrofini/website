@@ -257,6 +257,14 @@ export default function CentreOfExcellencePage() {
               Schedule a Briefing
             </a>
           </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.6 }}
+            className="mt-8"
+          >
+            <Link href="/centre-of-excellence/our-journey" className="text-white/50 hover:text-white/80 text-sm transition-colors underline underline-offset-4">
+              Read Our Journey — where we are and where we are going →
+            </Link>
+          </motion.div>
         </div>
       </section>
 
