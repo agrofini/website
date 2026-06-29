@@ -424,7 +424,7 @@ export default function CentreOfExcellencePage() {
                 <p className="font-serif text-2xl font-bold mb-3">Agrofini Centre of Excellence</p>
                 <p className="text-white/60 text-sm leading-relaxed">Innovation · Research · Training · Commercial Production · Demonstration</p>
                 <div className="mt-6 pt-6 border-t border-white/10">
-                  <p className="text-white/40 text-xs">Benin City, Edo State, Nigeria</p>
+                  <p className="text-white/40 text-xs">Ogun State &amp; Benin City, Edo State, Nigeria</p>
                   <p className="text-white/40 text-xs">300km from West Africa&apos;s largest food market</p>
                 </div>
               </div>
