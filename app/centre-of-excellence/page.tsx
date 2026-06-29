@@ -40,7 +40,7 @@ const marketStats = [
   { value: '220M+', label: 'Population — Africa\'s largest domestic market, growing at 3% per year' },
   { value: '<2%', label: 'Of Nigerian vegetables grown under protection today — the gap is the opportunity' },
   { value: '40–50%', label: 'Post-harvest loss rate in conventional supply chains — protected agriculture solves this' },
-  { value: '$5B+', label: 'Nigeria\'s annual food import bill — demand that domestic protected agriculture can capture' },
+  { value: '$6B+', label: 'Nigeria\'s annual food import bill — demand that domestic protected agriculture can capture' },
 ]
 
 const founderExclusives = [
@@ -338,7 +338,7 @@ export default function CentreOfExcellencePage() {
           >
             <p className="text-accent font-semibold uppercase tracking-widest text-sm mb-4">The Gap That Creates the Opportunity</p>
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-5">
-              A $5B+ Import Bill. A Sub-2% Coverage Rate.<br />A Market Waiting to Be Built.
+              A $6B+ Import Bill. A Sub-2% Coverage Rate.<br />A Market Waiting to Be Built.
             </h2>
             <p className="text-white/70 text-lg leading-relaxed max-w-3xl mx-auto">
               The reason Nigeria imports food at scale is not a lack of land, climate, or labour. It is a systemic absence of the infrastructure, technology, knowledge, and ecosystem that converts agricultural potential into commercial production. These are exactly the gaps a Centre of Excellence closes.
