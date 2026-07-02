@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { CONTACT_SUPPLY } from '../lib/contactLinks'
 
 export default function HeroSection() {
   return (
@@ -72,7 +73,7 @@ export default function HeroSection() {
             Our Produce
           </Link>
           <Link
-            href="/buyers"
+            href={CONTACT_SUPPLY}
             aria-label="Become a supply partner with Agrofini"
             className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition-colors text-lg"
           >

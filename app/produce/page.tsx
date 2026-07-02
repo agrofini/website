@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { CONTACT_SUPPLY } from '../lib/contactLinks'
 
 const crops = [
   {
@@ -210,7 +211,7 @@ export default function ProducePage() {
             ))}
           </div>
           <Link
-            href="/contact"
+            href={CONTACT_SUPPLY}
             aria-label="Contact Agrofini to start a supply relationship"
             className="inline-block bg-primary text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-primaryDark transition-colors"
           >

@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import { CONTACT_SUPPLY } from '../lib/contactLinks'
 
 const buyerTypes = [
   { icon: 'fa-solid fa-utensils', title: 'Hotels & Restaurants', desc: 'Contract supply with scheduled delivery — plan your menus around a source that behaves like a reliable supplier, not a market stall.' },
@@ -57,13 +58,13 @@ export default function BuyersPage() {
           <motion.div
             initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <a
-              href="mailto:info@agrofiniholdings.com"
-              aria-label="Email Agrofini to become a supply partner"
+            <Link
+              href={CONTACT_SUPPLY}
+              aria-label="Become a supply partner with Agrofini"
               className="inline-block bg-accent text-text px-10 py-4 rounded-full font-semibold text-lg hover:bg-accent/90 transition-colors"
             >
               Start the Conversation
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -217,20 +218,20 @@ export default function BuyersPage() {
             We are taking expressions of interest from supply partners now — ahead of our first harvest season. The earlier you engage, the better we can plan for your volumes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:info@agrofiniholdings.com"
-              aria-label="Email Agrofini to become a supply partner"
+            <Link
+              href={CONTACT_SUPPLY}
+              aria-label="Become a supply partner with Agrofini"
               className="inline-block bg-text text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-primaryDark transition-colors"
             >
-              Email Us Now
-            </a>
-            <Link
-              href="/contact"
-              aria-label="Contact Agrofini"
+              Get in Touch
+            </Link>
+            <a
+              href="mailto:info@agrofiniholdings.com"
+              aria-label="Email Agrofini directly"
               className="inline-block border-2 border-text text-text px-10 py-4 rounded-full font-semibold text-lg hover:bg-text hover:text-white transition-colors"
             >
-              Use the Contact Form
-            </Link>
+              Email Us Directly
+            </a>
           </div>
         </motion.div>
       </section>

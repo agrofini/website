@@ -1,6 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { CONTACT_SUPPLY } from '../lib/contactLinks'
 
 const steps = [
   {
@@ -71,13 +73,13 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <a
-            href="/buyers"
+          <Link
+            href={CONTACT_SUPPLY}
             aria-label="Become a supply partner with Agrofini"
             className="inline-block bg-primary text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-primaryDark transition-colors"
           >
             Become a Supply Partner
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

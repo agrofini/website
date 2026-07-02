@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { CONTACT_FOUNDING, CONTACT_BRIEFING, contactPartner } from '../lib/contactLinks'
 
 const programmes = [
   {
@@ -242,20 +243,20 @@ export default function CentreOfExcellencePage() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <a
-              href="mailto:info@agrofiniholdings.com?subject=Founding%20Partner%20Enquiry%20%E2%80%94%20Centre%20of%20Excellence"
+            <Link
+              href={CONTACT_FOUNDING}
               aria-label="Claim a Founding Partner slot"
               className="inline-block bg-accent text-text px-10 py-4 rounded-full font-semibold text-lg hover:bg-accent/90 transition-colors"
             >
               Claim Your Founding Partner Slot
-            </a>
-            <a
-              href="mailto:info@agrofiniholdings.com?subject=Partnership%20Briefing%20Request%20%E2%80%94%20Centre%20of%20Excellence"
+            </Link>
+            <Link
+              href={CONTACT_BRIEFING}
               aria-label="Schedule a Founding Partner briefing"
               className="inline-block border-2 border-white text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primaryDark transition-colors"
             >
               Schedule a Briefing
-            </a>
+            </Link>
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.6 }}
@@ -529,13 +530,13 @@ export default function CentreOfExcellencePage() {
                     </ul>
                   </div>
 
-                  <a
-                    href={`mailto:info@agrofiniholdings.com?subject=Founding%20Partner%20Enquiry%20%E2%80%94%20${encodeURIComponent(partner.title)}`}
+                  <Link
+                    href={contactPartner(partner.title)}
                     aria-label={`Claim the ${partner.title} founding partnership slot`}
                     className="block w-full bg-primaryDark text-white text-center px-6 py-3 rounded-xl font-semibold text-sm hover:bg-primary transition-colors"
                   >
                     Claim This Slot
-                  </a>
+                  </Link>
                 </div>
               </motion.div>
             ))}
@@ -552,13 +553,13 @@ export default function CentreOfExcellencePage() {
             <p className="text-white/65 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
               Agrofini is accepting expressions of interest now. We will schedule a private briefing, walk you through your specific category position, and outline the full partnership structure before you make any commitment.
             </p>
-            <a
-              href="mailto:info@agrofiniholdings.com?subject=Founding%20Partner%20Briefing%20Request%20%E2%80%94%20Centre%20of%20Excellence"
+            <Link
+              href={CONTACT_BRIEFING}
               aria-label="Schedule a private Founding Partner briefing"
               className="inline-block bg-accent text-text px-12 py-5 rounded-full font-semibold text-lg hover:bg-accent/90 transition-colors"
             >
               Schedule Your Private Briefing
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -713,19 +714,19 @@ export default function CentreOfExcellencePage() {
               We will walk you through your specific category slot, the full structure of the Founding Partnership, what you receive, what we build together, and what the timeline looks like — before you make any commitment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:info@agrofiniholdings.com?subject=Founding%20Partner%20Briefing%20Request%20%E2%80%94%20Centre%20of%20Excellence"
+              <Link
+                href={CONTACT_BRIEFING}
                 aria-label="Schedule your Founding Partner briefing"
                 className="inline-block bg-primaryDark text-white px-12 py-5 rounded-full font-semibold text-xl hover:bg-primary transition-colors"
               >
                 Schedule Your Briefing
-              </a>
+              </Link>
               <Link
-                href="/contact"
-                aria-label="Contact Agrofini"
+                href={CONTACT_FOUNDING}
+                aria-label="Contact Agrofini about a founding partnership"
                 className="inline-block border-2 border-text text-text px-12 py-5 rounded-full font-semibold text-xl hover:bg-text hover:text-white transition-colors"
               >
-                Contact Agrofini
+                Enquire About a Slot
               </Link>
             </div>
           </motion.div>

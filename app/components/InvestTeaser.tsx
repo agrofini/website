@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { CONTACT_INVEST } from '../lib/contactLinks'
 
 const teaserStats = [
   { value: '5 Acres', label: 'Land already secured — Primepoint Farm Estate, Ogun State' },
@@ -32,7 +33,7 @@ export default function InvestTeaser() {
               We are opening our first round of investment to partners who want to be part of building Nigeria&apos;s next great agribusiness — not just profit from it.
             </p>
             <Link
-              href="/invest"
+              href={CONTACT_INVEST}
               aria-label="Explore investment opportunities with Agrofini"
               className="inline-block bg-accent text-text px-10 py-4 rounded-full font-semibold text-lg hover:bg-accent/90 transition-colors"
             >

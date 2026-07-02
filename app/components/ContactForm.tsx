@@ -2,9 +2,29 @@
 
 import { useState } from 'react'
 
-export default function ContactForm() {
-  const [submitted, setSubmitted] = useState(false)
+const SUBJECTS = [
+  'General Enquiry',
+  'Supply Partnership',
+  'Wholesale / Market Supply',
+  'Investment Interest',
+  'Founding Partner Enquiry',
+  'Founding Partner Briefing',
+  'Farm Visit Request',
+  'Media & Press',
+  'Other',
+]
 
+interface Props {
+  defaultSubject?: string
+  defaultMessage?: string
+}
+
+export default function ContactForm({ defaultSubject, defaultMessage }: Props) {
+  const initialSubject = SUBJECTS.includes(defaultSubject ?? '') ? (defaultSubject ?? 'General Enquiry') : 'General Enquiry'
+
+  const [subject, setSubject] = useState(initialSubject)
+  const [message, setMessage] = useState(defaultMessage ?? '')
+  const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -89,12 +109,13 @@ export default function ContactForm() {
         <select
           id="subject"
           name="subject"
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
           className="w-full px-4 py-3 rounded-xl border border-sage focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 bg-white transition-colors"
         >
-          <option value="General Enquiry">General Enquiry</option>
-          <option value="Investment Interest">Investment Interest</option>
-          <option value="Partnership">Partnership</option>
-          <option value="Media">Media</option>
+          {SUBJECTS.map((s) => (
+            <option key={s} value={s}>{s}</option>
+          ))}
         </select>
       </div>
 
@@ -105,6 +126,8 @@ export default function ContactForm() {
           name="message"
           required
           rows={5}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           className="w-full px-4 py-3 rounded-xl border border-sage focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 bg-white transition-colors resize-none"
           placeholder="Tell us about your interest..."
         />

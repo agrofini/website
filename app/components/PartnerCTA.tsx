@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { CONTACT_SUPPLY } from '../lib/contactLinks'
 
 const supplyStats = [
   { value: '4–6 Hrs', label: 'Farm to Lagos on every delivery — same day, every time' },
@@ -32,7 +33,7 @@ export default function PartnerCTA() {
               No brokers. No overnight transit. No stale supply chains. Just a direct relationship between your kitchen and our farm.
             </p>
             <Link
-              href="/buyers"
+              href={CONTACT_SUPPLY}
               aria-label="Become a supply partner with Agrofini"
               className="inline-block bg-accent text-text px-10 py-4 rounded-full font-semibold text-lg hover:bg-accent/90 transition-colors"
             >

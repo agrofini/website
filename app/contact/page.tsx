@@ -1,6 +1,6 @@
 import ContactForm from '../components/ContactForm'
 
-export default function ContactPage() {
+export default function ContactPage({ searchParams }: { searchParams: { subject?: string; message?: string } }) {
   return (
     <div className="pt-24 pb-20 bg-warmWhite min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
@@ -69,7 +69,7 @@ export default function ContactPage() {
 
           {/* Right: form */}
           <div>
-            <ContactForm />
+            <ContactForm defaultSubject={searchParams.subject} defaultMessage={searchParams.message} />
           </div>
         </div>
       </div>

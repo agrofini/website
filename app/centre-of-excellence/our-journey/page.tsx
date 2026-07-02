@@ -2,6 +2,7 @@
 
 import { useScroll, motion } from 'framer-motion'
 import Link from 'next/link'
+import { CONTACT_BRIEFING, CONTACT_FOUNDING, contactPartner } from '../../lib/contactLinks'
 
 const influenceStages = [
   {
@@ -98,7 +99,7 @@ const partnerJourney = [
     title: 'Request a Founding Partner Briefing',
     desc: "A 30-minute conversation with Agrofini's leadership team. We walk through the Centre's master plan, the available founding partner categories, and what the programme involves in practice. No commitment required. We answer every question directly.",
     cta: 'Schedule Your Briefing',
-    href: 'mailto:info@agrofiniholdings.com?subject=Founding%20Partner%20Briefing%20Request%20%E2%80%94%20Centre%20of%20Excellence',
+    href: CONTACT_BRIEFING,
   },
   {
     step: '02',
@@ -215,13 +216,13 @@ export default function OurJourneyPage() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.45 }}
           >
-            <a
-              href="mailto:info@agrofiniholdings.com?subject=Founding%20Partner%20Briefing%20Request%20%E2%80%94%20Centre%20of%20Excellence"
+            <Link
+              href={CONTACT_BRIEFING}
               aria-label="Schedule a Founding Partner briefing"
               className="inline-block bg-accent text-text px-10 py-4 rounded-full font-semibold text-lg hover:bg-accent/90 transition-colors"
             >
               Schedule a Founding Partner Briefing
-            </a>
+            </Link>
             <Link
               href="/centre-of-excellence"
               aria-label="View all founding partner categories"
@@ -586,13 +587,13 @@ export default function OurJourneyPage() {
                     <p className="font-serif font-bold text-text text-sm">{slot.title}</p>
                   </div>
                 </div>
-                <a
-                  href={`mailto:info@agrofiniholdings.com?subject=Founding%20Partner%20Enquiry%20%E2%80%94%20${encodeURIComponent(slot.title)}`}
+                <Link
+                  href={contactPartner(slot.title)}
                   aria-label={`Enquire about the ${slot.title} founding partner position`}
                   className="text-xs font-bold text-primary border border-primary/30 rounded-xl px-3 py-2 hover:bg-primary hover:text-white transition-colors flex-shrink-0 ml-2"
                 >
                   Claim
-                </a>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -625,13 +626,13 @@ export default function OurJourneyPage() {
             <p className="text-white/40 text-base mb-12">
               If your category is still available, we will confirm it in writing.
             </p>
-            <a
-              href="mailto:info@agrofiniholdings.com?subject=Founding%20Partner%20Briefing%20Request%20%E2%80%94%20Centre%20of%20Excellence"
+            <Link
+              href={CONTACT_BRIEFING}
               aria-label="Schedule a Founding Partner Briefing with Agrofini"
               className="inline-block bg-accent text-text px-14 py-5 rounded-full font-bold text-xl hover:bg-accent/90 transition-colors"
             >
               Schedule Your Briefing
-            </a>
+            </Link>
             <p className="mt-6 text-white/30 text-sm">
               info@agrofiniholdings.com · 11 positions open · One per category · Category exclusive
             </p>

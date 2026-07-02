@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { CONTACT_SUPPLY } from '../lib/contactLinks'
 
 const milestones = [
   { phase: 'Now', title: 'Foundation & Planning', body: 'Land secured at Primepoint Farm Estate, Ogun State. Supply partnerships being established. Farm Operations Plan finalised.' },
@@ -194,7 +195,7 @@ export default function AboutPage() {
             We are now establishing supply partnerships with hotels, restaurants, wholesale markets, and corporate buyers ahead of first operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/buyers" aria-label="Become a supply partner" className="inline-block bg-white text-primary px-10 py-4 rounded-full font-semibold text-lg hover:bg-warmWhite transition-colors">
+            <Link href={CONTACT_SUPPLY} aria-label="Become a supply partner" className="inline-block bg-white text-primary px-10 py-4 rounded-full font-semibold text-lg hover:bg-warmWhite transition-colors">
               Become a Supply Partner
             </Link>
             <Link href="/produce" aria-label="View our produce" className="inline-block border-2 border-white text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary transition-colors">
