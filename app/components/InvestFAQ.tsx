@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     q: 'Is Agrofini a properly registered company?',
-    a: 'Yes. Agrofini West Africa Limited is registered with the Corporate Affairs Commission (CAC) of Nigeria under RC No. 8181060. Our registration is a matter of public record and fully verifiable on the CAC portal.',
+    a: 'Yes. Agrofini West Africa Limited is registered with the Corporate Affairs Commission (CAC) of Nigeria. Our registration is a matter of public record and fully verifiable on the CAC portal.',
   },
   {
     q: 'Is Agrofini currently registered with the SEC?',

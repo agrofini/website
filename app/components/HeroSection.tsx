@@ -28,7 +28,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          Agrofini West Africa Limited — RC No. 8181060
+          Agrofini West Africa Limited
         </motion.p>
 
         <motion.h1

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: '%s | Agrofini West Africa',
   },
   description:
-    'Agrofini West Africa Limited (RC No. 8181060) is building demand-anchored commercial farms in Nigeria — horticulture, snail farming, and integrated agribusiness supplying Lagos directly from Ogun State and Benin City.',
+    'Agrofini West Africa Limited is building demand-anchored commercial farms in Nigeria — horticulture, snail farming, and integrated agribusiness supplying Lagos directly from Ogun State and Benin City.',
   keywords: [
     'agribusiness Nigeria',
     'farm investment Nigeria',
