@@ -13,13 +13,14 @@ export default function ContactForm() {
     const form = e.currentTarget
     const data = new FormData(form)
 
-    // Only submit to Netlify in production — the handler doesn't exist in dev/test
-    if (process.env.NODE_ENV === 'production') {
-      fetch('/', {
+    try {
+      await fetch('https://formspree.io/f/mojopjly', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(Object.fromEntries(data.entries()) as Record<string, string>).toString(),
-      }).catch(() => {})
+        body: data,
+        headers: { Accept: 'application/json' },
+      })
+    } catch {
+      // fail silently — user still sees the success state
     }
 
     setSubmitted(true)
