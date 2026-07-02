@@ -118,6 +118,40 @@ export default function ContactForm({ defaultSubject, defaultMessage }: Props) {
       </div>
 
       <div>
+        <label htmlFor="company" className="block text-sm font-medium text-text mb-1">Company / Organisation <span className="text-text/40">(optional)</span></label>
+        <input
+          id="company"
+          name="company"
+          type="text"
+          className="w-full px-4 py-3 rounded-xl border border-sage focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 bg-white transition-colors"
+          placeholder="Your company or organisation"
+        />
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label htmlFor="country" className="block text-sm font-medium text-text mb-1">Country <span className="text-text/40">(optional)</span></label>
+          <input
+            id="country"
+            name="country"
+            type="text"
+            className="w-full px-4 py-3 rounded-xl border border-sage focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 bg-white transition-colors"
+            placeholder="e.g. Nigeria"
+          />
+        </div>
+        <div>
+          <label htmlFor="state" className="block text-sm font-medium text-text mb-1">State / Province <span className="text-text/40">(optional)</span></label>
+          <input
+            id="state"
+            name="state"
+            type="text"
+            className="w-full px-4 py-3 rounded-xl border border-sage focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 bg-white transition-colors"
+            placeholder="e.g. Lagos State"
+          />
+        </div>
+      </div>
+
+      <div>
         <label htmlFor="subject" className="block text-sm font-medium text-text mb-1">Subject</label>
         <select
           id="subject"
