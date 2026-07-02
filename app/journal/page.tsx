@@ -117,7 +117,7 @@ export default function JournalPage() {
             <form
               name="journal-subscribe"
               method="POST"
-              action="https://formspree.io/f/xeebperp"
+              action="https://formspree.io/f/mojopjly"
               data-netlify="true"
               className="flex flex-col sm:flex-row gap-3"
             >

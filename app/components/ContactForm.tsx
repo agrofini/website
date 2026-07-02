@@ -14,17 +14,7 @@ const SUBJECTS = [
   'Other',
 ]
 
-const ENDPOINTS: Record<string, string> = {
-  'General Enquiry':          'https://formspree.io/f/xrewoejz',
-  'Supply Partnership':       'https://formspree.io/f/xdarpabe',
-  'Wholesale / Market Supply':'https://formspree.io/f/mlgyogzl',
-  'Investment Interest':      'https://formspree.io/f/meebpenp',
-  'Founding Partner Enquiry': 'https://formspree.io/f/mvzjvzly',
-  'Founding Partner Briefing':'https://formspree.io/f/xbdvpdwn',
-  'Farm Visit Request':       'https://formspree.io/f/mdarpajk',
-  'Media & Press':            'https://formspree.io/f/xqevgejp',
-  'Other':                    'https://formspree.io/f/xlgyogvb',
-}
+const ENDPOINT = 'https://formspree.io/f/mojopjly'
 
 interface Props {
   defaultSubject?: string
@@ -46,8 +36,7 @@ export default function ContactForm({ defaultSubject, defaultMessage }: Props) {
     const data = new FormData(form)
 
     try {
-      const endpoint = ENDPOINTS[subject] ?? ENDPOINTS['General Enquiry']
-      await fetch(endpoint, {
+      await fetch(ENDPOINT, {
         method: 'POST',
         body: data,
         headers: { Accept: 'application/json' },
